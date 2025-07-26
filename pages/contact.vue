@@ -18,140 +18,316 @@
     </section>
 
     <!-- Contact Content -->
-    <section class="py-20">
+    <section class="py-20 max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-16">
           <!-- Contact Form -->
           <div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+            <h2 class="text-3xl font-bold text-blue-700 mb-8">
               Send us a message
             </h2>
 
             <form @submit.prevent="submitForm" class="space-y-6">
               <!-- Name Fields -->
               <div class="grid md:grid-cols-2 gap-4">
-                <UFormGroup label="First Name" required>
-                  <UInput
+                <div>
+                  <label class="block text-sm font-medium text-gray-500 mb-2">
+                    First Name*
+                  </label>
+                  <input
                     v-model="form.firstName"
+                    type="text"
                     placeholder="John"
-                    :error="errors.firstName"
+                    :class="[
+                      'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500',
+                      errors.firstName
+                        ? 'border-red-500 bg-red-50'
+                        : 'border-gray-300  placeholder-gray-400',
+                    ]"
                     @blur="validateField('firstName')"
                   />
-                </UFormGroup>
-                <UFormGroup label="Last Name" required>
-                  <UInput
+                  <p v-if="errors.firstName" class="mt-1 text-sm text-red-600">
+                    {{ errors.firstName }}
+                  </p>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-500 mb-2">
+                    Last Name*
+                  </label>
+                  <input
                     v-model="form.lastName"
+                    type="text"
                     placeholder="Doe"
-                    :error="errors.lastName"
+                    :class="[
+                      'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500',
+                      errors.lastName
+                        ? 'border-red-500 bg-red-50'
+                        : 'border-gray-300  placeholder-gray-400',
+                    ]"
                     @blur="validateField('lastName')"
                   />
-                </UFormGroup>
+                  <p v-if="errors.lastName" class="mt-1 text-sm text-red-600">
+                    {{ errors.lastName }}
+                  </p>
+                </div>
               </div>
 
               <!-- Email -->
-              <UFormGroup label="Email Address" required>
-                <UInput
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  Email Address*
+                </label>
+                <input
                   v-model="form.email"
                   type="email"
                   placeholder="john@example.com"
-                  :error="errors.email"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500',
+                    errors.email
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300  placeholder-gray-400',
+                  ]"
                   @blur="validateField('email')"
                 />
-              </UFormGroup>
+                <p v-if="errors.email" class="mt-1 text-sm text-red-600">
+                  {{ errors.email }}
+                </p>
+              </div>
 
               <!-- Phone -->
-              <UFormGroup label="Phone Number">
-                <UInput
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  Phone Number
+                </label>
+                <input
                   v-model="form.phone"
                   type="tel"
                   placeholder="+1 (555) 123-4567"
-                  :error="errors.phone"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500',
+                    errors.phone
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300  placeholder-gray-400',
+                  ]"
                   @blur="validateField('phone')"
                 />
-              </UFormGroup>
+                <p v-if="errors.phone" class="mt-1 text-sm text-red-600">
+                  {{ errors.phone }}
+                </p>
+              </div>
 
               <!-- Company -->
-              <UFormGroup label="Company Name">
-                <UInput
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  Company Name
+                </label>
+                <input
                   v-model="form.company"
+                  type="text"
                   placeholder="Your Company Ltd."
-                  :error="errors.company"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500',
+                    errors.company
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300  placeholder-gray-400',
+                  ]"
                   @blur="validateField('company')"
                 />
-              </UFormGroup>
+                <p v-if="errors.company" class="mt-1 text-sm text-red-600">
+                  {{ errors.company }}
+                </p>
+              </div>
 
               <!-- Project Type -->
-              <UFormGroup label="Project Type" required>
-                <USelect
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  Project Type*
+                </label>
+                <select
                   v-model="form.projectType"
-                  :options="projectTypes"
-                  placeholder="Select a project type"
-                  :error="errors.projectType"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    errors.projectType
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300 ',
+                  ]"
+                  style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22/%3E%3C/svg%3E');
+                  "
                   @blur="validateField('projectType')"
-                />
-              </UFormGroup>
+                >
+                  <option value="" disabled>Select a project type</option>
+                  <option
+                    v-for="option in projectTypes"
+                    :key="option.value"
+                    :value="option.value"
+                    class=""
+                  >
+                    {{ option.label }}
+                  </option>
+                </select>
+                <p v-if="errors.projectType" class="mt-1 text-sm text-red-600">
+                  {{ errors.projectType }}
+                </p>
+              </div>
 
               <!-- Budget Range -->
-              <UFormGroup label="Budget Range">
-                <USelect
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  Budget Range
+                </label>
+                <select
                   v-model="form.budget"
-                  :options="budgetRanges"
-                  placeholder="Select budget range"
-                  :error="errors.budget"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    errors.budget
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300 ',
+                  ]"
+                  style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22/%3E%3C/svg%3E');
+                  "
                   @blur="validateField('budget')"
-                />
-              </UFormGroup>
+                >
+                  <option value="" disabled>Select budget range</option>
+                  <option
+                    v-for="option in budgetRanges"
+                    :key="option.value"
+                    :value="option.value"
+                    class=""
+                  >
+                    {{ option.label }}
+                  </option>
+                </select>
+                <p v-if="errors.budget" class="mt-1 text-sm text-red-600">
+                  {{ errors.budget }}
+                </p>
+              </div>
 
               <!-- Timeline -->
-              <UFormGroup label="Timeline">
-                <USelect
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  Timeline
+                </label>
+                <select
                   v-model="form.timeline"
-                  :options="timelines"
-                  placeholder="Select timeline"
-                  :error="errors.timeline"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    errors.timeline
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300 ',
+                  ]"
+                  style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22/%3E%3C/svg%3E');
+                  "
                   @blur="validateField('timeline')"
-                />
-              </UFormGroup>
+                >
+                  <option value="" disabled>Select timeline</option>
+                  <option
+                    v-for="option in timelines"
+                    :key="option.value"
+                    :value="option.value"
+                    class=""
+                  >
+                    {{ option.label }}
+                  </option>
+                </select>
+                <p v-if="errors.timeline" class="mt-1 text-sm text-red-600">
+                  {{ errors.timeline }}
+                </p>
+              </div>
 
               <!-- Message -->
-              <UFormGroup label="Project Details" required>
-                <UTextarea
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  Project Details*
+                </label>
+                <textarea
                   v-model="form.message"
+                  rows="6"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
-                  :rows="6"
-                  :error="errors.message"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none',
+                    errors.message
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300  placeholder-gray-400',
+                  ]"
                   @blur="validateField('message')"
-                />
-              </UFormGroup>
+                ></textarea>
+                <p v-if="errors.message" class="mt-1 text-sm text-red-600">
+                  {{ errors.message }}
+                </p>
+              </div>
 
               <!-- How did you hear about us -->
-              <UFormGroup label="How did you hear about us?">
-                <USelect
+              <div>
+                <label class="block text-sm font-medium text-gray-500 mb-2">
+                  How did you hear about us?
+                </label>
+                <select
                   v-model="form.referral"
-                  :options="referralSources"
-                  placeholder="Select an option"
-                  :error="errors.referral"
+                  :class="[
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    errors.referral
+                      ? 'border-red-500 bg-red-50'
+                      : 'border-gray-300 ',
+                  ]"
+                  style="
+                    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.4-12.8z%22/%3E%3C/svg%3E');
+                  "
                   @blur="validateField('referral')"
-                />
-              </UFormGroup>
+                >
+                  <option value="" disabled>Select an option</option>
+                  <option
+                    v-for="option in referralSources"
+                    :key="option.value"
+                    :value="option.value"
+                    class=""
+                  >
+                    {{ option.label }}
+                  </option>
+                </select>
+                <p v-if="errors.referral" class="mt-1 text-sm text-red-600">
+                  {{ errors.referral }}
+                </p>
+              </div>
 
               <!-- Submit Button -->
-              <UButton
+              <button
                 type="submit"
-                color="primary"
-                size="lg"
-                :loading="isSubmitting"
                 :disabled="isSubmitting"
-                class="w-full"
+                class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
               >
+                <span v-if="isSubmitting" class="mr-2">
+                  <svg
+                    class="animate-spin h-5 w-5 text-white"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle
+                      class="opacity-25"
+                      cx="12"
+                      cy="12"
+                      r="10"
+                      stroke="currentColor"
+                      stroke-width="4"
+                    ></circle>
+                    <path
+                      class="opacity-75"
+                      fill="currentColor"
+                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                    ></path>
+                  </svg>
+                </span>
                 {{ isSubmitting ? "Sending Message..." : "Send Message" }}
-              </UButton>
+              </button>
             </form>
           </div>
 
           <!-- Contact Information -->
           <div>
-            <h2 class="text-3xl font-bold text-gray-900 mb-8">
+            <h2 class="text-3xl font-bold text-blue-700 mb-8">
               Contact Information
             </h2>
 
@@ -163,10 +339,18 @@
                 </h3>
                 <div class="space-y-4">
                   <div class="flex items-start gap-3">
-                    <UIcon
-                      name="i-heroicons-envelope"
+                    <svg
                       class="w-5 h-5 text-blue-600 mt-1"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"
+                      />
+                      <path
+                        d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
+                      />
+                    </svg>
                     <div>
                       <p class="font-medium text-gray-900">Email</p>
                       <a
@@ -178,10 +362,15 @@
                     </div>
                   </div>
                   <div class="flex items-start gap-3">
-                    <UIcon
-                      name="i-heroicons-phone"
+                    <svg
                       class="w-5 h-5 text-blue-600 mt-1"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
+                      />
+                    </svg>
                     <div>
                       <p class="font-medium text-gray-900">Phone</p>
                       <a
@@ -193,10 +382,17 @@
                     </div>
                   </div>
                   <div class="flex items-start gap-3">
-                    <UIcon
-                      name="i-heroicons-clock"
+                    <svg
                       class="w-5 h-5 text-blue-600 mt-1"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                     <div>
                       <p class="font-medium text-gray-900">Business Hours</p>
                       <p class="text-gray-600">
@@ -214,26 +410,47 @@
                 </h3>
                 <div class="space-y-3">
                   <div class="flex items-center gap-2">
-                    <UIcon
-                      name="i-heroicons-check-circle"
+                    <svg
                       class="w-5 h-5 text-green-600"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                     <span class="text-gray-700"
                       >We respond within 24 hours</span
                     >
                   </div>
                   <div class="flex items-center gap-2">
-                    <UIcon
-                      name="i-heroicons-check-circle"
+                    <svg
                       class="w-5 h-5 text-green-600"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                     <span class="text-gray-700">Free initial consultation</span>
                   </div>
                   <div class="flex items-center gap-2">
-                    <UIcon
-                      name="i-heroicons-check-circle"
+                    <svg
                       class="w-5 h-5 text-green-600"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                     <span class="text-gray-700">Detailed project proposal</span>
                   </div>
                 </div>
@@ -246,31 +463,57 @@
                 </h3>
                 <div class="space-y-3">
                   <div class="flex items-center gap-2">
-                    <UIcon
-                      name="i-heroicons-paint-brush"
+                    <svg
                       class="w-4 h-4 text-blue-600"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                      />
+                    </svg>
                     <span class="text-gray-700">Web Design</span>
                   </div>
                   <div class="flex items-center gap-2">
-                    <UIcon
-                      name="i-heroicons-code-bracket"
+                    <svg
                       class="w-4 h-4 text-blue-600"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                     <span class="text-gray-700">Web Development</span>
                   </div>
                   <div class="flex items-center gap-2">
-                    <UIcon
-                      name="i-heroicons-cpu-chip"
+                    <svg
                       class="w-4 h-4 text-blue-600"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                     <span class="text-gray-700">Software Development</span>
                   </div>
                   <div class="flex items-center gap-2">
-                    <UIcon
-                      name="i-heroicons-magnifying-glass"
+                    <svg
                       class="w-4 h-4 text-blue-600"
-                    />
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
                     <span class="text-gray-700">SEO & Marketing</span>
                   </div>
                 </div>
@@ -286,10 +529,16 @@
                   discuss your project in detail.
                 </p>
                 <div class="flex gap-3">
-                  <UButton variant="outline" color="primary">
+                  <button
+                    class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                  >
                     View FAQ
-                  </UButton>
-                  <UButton color="primary"> Schedule Call </UButton>
+                  </button>
+                  <button
+                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Schedule Call
+                  </button>
                 </div>
               </div>
             </div>
@@ -299,19 +548,27 @@
     </section>
 
     <!-- Success Modal -->
-    <UModal v-model="showSuccessModal">
-      <UCard>
-        <template #header>
-          <div class="flex items-center gap-3">
-            <UIcon
-              name="i-heroicons-check-circle"
-              class="w-6 h-6 text-green-600"
+    <div
+      v-if="showSuccessModal"
+      class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4"
+    >
+      <div class="bg-white rounded-lg max-w-md w-full p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <svg
+            class="w-6 h-6 text-green-600"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+              clip-rule="evenodd"
             />
-            <h3 class="text-lg font-semibold text-gray-900">
-              Message Sent Successfully!
-            </h3>
-          </div>
-        </template>
+          </svg>
+          <h3 class="text-lg font-semibold text-gray-900">
+            Message Sent Successfully!
+          </h3>
+        </div>
 
         <div class="space-y-4">
           <p class="text-gray-600">
@@ -322,40 +579,67 @@
             <h4 class="font-semibold text-gray-900 mb-2">What happens next?</h4>
             <ul class="space-y-2 text-sm text-gray-600">
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-heroicons-arrow-right"
+                <svg
                   class="w-4 h-4 text-blue-600 mt-0.5"
-                />
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <span>We'll review your project requirements</span>
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-heroicons-arrow-right"
+                <svg
                   class="w-4 h-4 text-blue-600 mt-0.5"
-                />
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <span>Schedule a consultation call to discuss details</span>
               </li>
               <li class="flex items-start gap-2">
-                <UIcon
-                  name="i-heroicons-arrow-right"
+                <svg
                   class="w-4 h-4 text-blue-600 mt-0.5"
-                />
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
                 <span>Provide a detailed project proposal and timeline</span>
               </li>
             </ul>
           </div>
         </div>
 
-        <template #footer>
-          <div class="flex justify-end gap-3">
-            <UButton variant="outline" @click="showSuccessModal = false">
-              Close
-            </UButton>
-            <UButton color="primary" @click="goHome"> Back to Home </UButton>
-          </div>
-        </template>
-      </UCard>
-    </UModal>
+        <div class="flex justify-end gap-3 mt-6">
+          <button
+            @click="showSuccessModal = false"
+            class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+          >
+            Close
+          </button>
+          <button
+            @click="goHome"
+            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -397,6 +681,11 @@ const errors = ref({
 // Form state
 const isSubmitting = ref(false);
 const showSuccessModal = ref(false);
+
+// Ensure success modal is hidden on page load
+onMounted(() => {
+  showSuccessModal.value = false;
+});
 
 // Form options
 const projectTypes = [

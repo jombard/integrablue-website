@@ -37,9 +37,9 @@
 
     <!-- Services Overview Section -->
     <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4">
+      <div class="ui-container mx-auto px-4 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             Our Services
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -117,12 +117,12 @@
     </section>
 
     <!-- Value Proposition Section -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Why Choose IntegraBlue?
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6">
+              Why Choose IntegraBlue Web Agency?
             </h2>
             <div class="space-y-6">
               <div class="flex items-start gap-4">
@@ -242,9 +242,9 @@
 
     <!-- Client Testimonials Section -->
     <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4">
+      <div class="ui-container mx-auto px-4 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             What Our Clients Say
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">

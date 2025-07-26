@@ -19,9 +19,9 @@
 
     <!-- Services Overview -->
     <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             What We Offer
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -158,10 +158,10 @@
     </section>
 
     <!-- Service Process/Workflow -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             Our Process
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -232,9 +232,9 @@
 
     <!-- Technology Stack Showcase -->
     <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             Our Technology Stack
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -311,7 +311,7 @@
               class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
             >
               <UIcon
-                name="i-simple-icons-nodejs"
+                name="i-simple-icons-nodedotjs"
                 class="w-6 h-6 text-blue-600"
               />
             </div>
@@ -370,10 +370,10 @@
     </section>
 
     <!-- Service Details -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             Service Details
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">

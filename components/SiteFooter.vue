@@ -1,6 +1,6 @@
 <template>
   <footer class="bg-gray-900 text-white py-16">
-    <div class="ui-container mx-auto px-4">
+    <div class="ui-container mx-auto px-4 max-w-7xl">
       <div class="grid md:grid-cols-4 gap-8">
         <div class="md:col-span-2">
           <h3 class="text-2xl font-bold mb-4">IntegraBlue Web Agency</h3>

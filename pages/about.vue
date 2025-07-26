@@ -7,7 +7,7 @@
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-4xl mx-auto text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            About <span class="text-blue-200">IntegraBlue</span>
+            About <span class="text-blue-200">IntegraBlue Web Agency</span>
           </h1>
           <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
             We're passionate about helping small businesses and startups succeed
@@ -18,11 +18,11 @@
     </section>
 
     <!-- Company Story and Mission -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6">
               Our Story
             </h2>
             <p class="text-lg text-gray-600 mb-6">
@@ -68,9 +68,9 @@
 
     <!-- Company Values -->
     <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             Our Values
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -180,10 +180,10 @@
     </section>
 
     <!-- Team Section (Placeholder) -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
             Our Team
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -214,10 +214,10 @@
 
     <!-- Why Choose IntegraBlue -->
     <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Why Choose IntegraBlue?
+          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
+            Why Choose IntegraBlue Web Agency?
           </h2>
           <p class="text-xl text-gray-600 max-w-2xl mx-auto">
             What sets us apart from other web agencies

@@ -19,7 +19,7 @@
 
     <!-- Filter Section -->
     <section class="py-12 bg-gray-50">
-      <div class="ui-container mx-auto px-4">
+      <div class="ui-container mx-auto px-4 max-w-7xl">
         <div class="flex flex-wrap justify-center gap-4 mb-8">
           <UButton
             v-for="category in categories"
@@ -36,9 +36,13 @@
     </section>
 
     <!-- Portfolio Grid -->
-    <section class="py-20">
+    <section class="py-20 max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <TransitionGroup
+          name="project-grid"
+          tag="div"
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
           <div
             v-for="project in filteredProjects"
             :key="project.id"
@@ -89,20 +93,20 @@
               </UButton>
             </div>
           </div>
-        </div>
+        </TransitionGroup>
       </div>
     </section>
 
     <!-- Project Modal -->
-    <UModal v-model="selectedProject" :ui="{ width: 'sm:max-w-4xl' }">
-      <UCard v-if="selectedProject">
+    <UModal v-model="selectedProject">
+      <UCard v-if="selectedProject" class="w-full max-w-4xl">
         <template #header>
           <div class="flex items-center justify-between">
             <h3 class="text-2xl font-bold text-gray-900">
               {{ selectedProject.title }}
             </h3>
             <UButton
-              color="gray"
+              color="neutral"
               variant="ghost"
               icon="i-heroicons-x-mark"
               @click="selectedProject = null"
@@ -233,8 +237,25 @@ definePageMeta({
     "Explore our portfolio of successful web projects and case studies. See how we help businesses grow with modern web solutions.",
 });
 
+// Define project type
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  category: string;
+  icon: string;
+  technologies: string[];
+  completed: string;
+  duration: string;
+  team: string;
+  features: string[];
+  challenge: string;
+  solution: string;
+  results: string;
+}
+
 // Portfolio data
-const projects = ref([
+const projects = ref<Project[]>([
   {
     id: 1,
     title: "E-Commerce Platform",
@@ -322,7 +343,7 @@ const projects = ref([
     description:
       "A beautiful, mobile-first website for a local restaurant with online ordering.",
     category: "web design",
-    icon: "i-heroicons-utensils",
+    icon: "i-heroicons-home-modern",
     technologies: ["Vue.js", "Vuetify", "Firebase", "Google Maps API"],
     completed: "December 2023",
     duration: "4 weeks",
@@ -400,7 +421,7 @@ const categories = [
   "software development",
 ];
 const selectedCategory = ref("all");
-const selectedProject = ref(null);
+const selectedProject = ref<Project | null>(null);
 
 // Computed properties
 const filteredProjects = computed(() => {
@@ -413,11 +434,13 @@ const filteredProjects = computed(() => {
 });
 
 // Methods
-const getCategoryColor = (category: string) => {
+const getCategoryColor = (
+  category: string
+): "primary" | "success" | "secondary" | "neutral" => {
   const colors = {
-    "web design": "primary",
-    "web development": "success",
-    "software development": "secondary",
+    "web design": "primary" as const,
+    "web development": "success" as const,
+    "software development": "secondary" as const,
   };
   return colors[category as keyof typeof colors] || "neutral";
 };
@@ -426,3 +449,35 @@ const contactUs = () => {
   navigateTo("/contact");
 };
 </script>
+
+<style scoped>
+/* Project grid transition animations */
+.project-grid-move,
+.project-grid-enter-active,
+.project-grid-leave-active {
+  transition: all 0.5s ease;
+}
+
+.project-grid-enter-from {
+  opacity: 0;
+  transform: scale(0.9) translateY(30px);
+}
+
+.project-grid-leave-to {
+  opacity: 0;
+  transform: scale(0.9) translateY(-30px);
+}
+
+.project-grid-leave-active {
+  position: absolute;
+}
+
+/* Ensure grid maintains layout during transitions */
+.project-grid {
+  position: relative;
+}
+
+.project-grid > * {
+  transition: all 0.5s ease;
+}
+</style>

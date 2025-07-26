@@ -18,7 +18,7 @@
                 isScrolled ? 'text-blue-600' : 'text-white',
               ]"
             >
-              IntegraBlue
+              IntegraBlue Web Agency
             </span>
           </NuxtLink>
         </div>
