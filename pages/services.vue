@@ -1,21 +1,11 @@
 <template>
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <section
-      class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 lg:py-32"
-    >
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Our <span class="text-blue-200">Services</span>
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Comprehensive web solutions designed to help your business grow and
-            succeed online
-          </p>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      title-white="Our"
+      title-blue="Services"
+      description="Comprehensive web solutions designed to help your business grow and succeed online"
+    />
 
     <!-- Services Overview -->
     <section class="py-20 bg-gray-50">
@@ -67,7 +57,12 @@
                 Conversion-focused layouts
               </li>
             </ul>
-            <UButton color="primary" variant="solid" class="w-full">
+            <UButton
+              color="primary"
+              variant="solid"
+              class="w-full"
+              @click="navigateTo('#web-design')"
+            >
               Learn More
             </UButton>
           </div>
@@ -108,7 +103,12 @@
                 Content management systems
               </li>
             </ul>
-            <UButton color="primary" variant="solid" class="w-full">
+            <UButton
+              color="primary"
+              variant="solid"
+              class="w-full"
+              @click="navigateTo('#web-development')"
+            >
               Learn More
             </UButton>
           </div>
@@ -149,7 +149,12 @@
                 Third-party integrations
               </li>
             </ul>
-            <UButton color="primary" variant="solid" class="w-full">
+            <UButton
+              color="primary"
+              variant="solid"
+              class="w-full"
+              @click="navigateTo('#software-solutions')"
+            >
               Learn More
             </UButton>
           </div>
@@ -385,7 +390,10 @@
           <!-- Web Design Details -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="lg:order-2">
-              <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-6"
+                id="web-design"
+              >
                 Web Design
               </h3>
               <p class="text-gray-600 mb-6">
@@ -484,7 +492,10 @@
           <!-- Web Development Details -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="lg:order-2">
-              <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-6"
+                id="web-development"
+              >
                 Web Development
               </h3>
               <p class="text-gray-600 mb-6">
@@ -579,7 +590,10 @@
           <!-- Software Development Details -->
           <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="lg:order-2">
-              <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+              <h3
+                class="text-2xl font-semibold text-gray-900 mb-6"
+                id="software-solutions"
+              >
                 Software Development
               </h3>
               <p class="text-gray-600 mb-6">
@@ -677,34 +691,10 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-blue-900 text-white">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Get Started?
-        </h2>
-        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Let's discuss your project and find the perfect solution for your
-          business
-        </p>
-        <div class="flex sm:flex-row gap-4 justify-center">
-          <UButton
-            size="lg"
-            color="primary"
-            variant="solid"
-            class="font-semibold"
-          >
-            Start Your Project
-          </UButton>
-          <UButton
-            size="lg"
-            variant="outline"
-            class="border-white text-white hover:bg-white hover:text-blue-900"
-          >
-            Schedule a Consultation
-          </UButton>
-        </div>
-      </div>
-    </section>
+    <CallToActionSection
+      title="Ready to Get Started?"
+      description="Let's discuss your project and find the perfect solution for your business"
+    />
   </div>
 </template>
 

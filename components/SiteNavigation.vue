@@ -2,9 +2,7 @@
   <nav
     :class="[
       'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-      isScrolled
-        ? 'bg-white shadow-lg'
-        : 'bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700',
+      isScrolled ? 'bg-white shadow-lg' : 'bg-blue-900',
     ]"
   >
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

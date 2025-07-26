@@ -31,23 +31,24 @@
           <h4 class="font-semibold mb-4">Services</h4>
           <ul class="space-y-2 text-gray-300">
             <li>
-              <a href="#" class="hover:text-white transition-colors"
+              <a
+                href="/services#web-design"
+                class="hover:text-white transition-colors"
                 >Web Design</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-white transition-colors"
+              <a
+                href="/services#web-development"
+                class="hover:text-white transition-colors"
                 >Web Development</a
               >
             </li>
             <li>
-              <a href="#" class="hover:text-white transition-colors"
+              <a
+                href="/services#software-solutions"
+                class="hover:text-white transition-colors"
                 >Software Development</a
-              >
-            </li>
-            <li>
-              <a href="#" class="hover:text-white transition-colors"
-                >Consulting</a
               >
             </li>
           </ul>
@@ -58,11 +59,7 @@
           <ul class="space-y-2 text-gray-300">
             <li class="flex items-center">
               <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
-              hello@integrablue.com
-            </li>
-            <li class="flex items-center">
-              <UIcon name="i-heroicons-phone" class="w-4 h-4 mr-2" />
-              +1 (555) 123-4567
+              <a href="mailto:hello@integrablue.com">hello@integrablue.com</a>
             </li>
             <li class="flex items-center">
               <UIcon name="i-heroicons-map-pin" class="w-4 h-4 mr-2" />

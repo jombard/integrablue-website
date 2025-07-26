@@ -1,21 +1,11 @@
 <template>
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <section
-      class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20"
-    >
-      <div class="ui-container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Our <span class="text-blue-200">Portfolio</span>
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Discover how we've helped businesses transform their digital
-            presence with modern, effective web solutions.
-          </p>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      title-white="Our"
+      title-blue="Portfolio"
+      description="Discover how we've helped businesses transform their digital presence with modern, effective web solutions."
+    />
 
     <!-- Filter Section -->
     <section class="py-12 bg-gray-50">
@@ -47,7 +37,7 @@
             v-for="project in filteredProjects"
             :key="project.id"
             class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
-            @click="selectedProject = project"
+            @click="openProjectModal(project)"
           >
             <div
               class="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center"
@@ -97,135 +87,132 @@
       </div>
     </section>
 
+    <CallToActionSection
+      title="Ready to Work Together?"
+      description="Let's discuss how IntegraBlue can help your business succeed online"
+    />
+
     <!-- Project Modal -->
-    <UModal v-model="selectedProject">
-      <UCard v-if="selectedProject" class="w-full max-w-4xl">
-        <template #header>
-          <div class="flex items-center justify-between">
-            <h3 class="text-2xl font-bold text-gray-900">
-              {{ selectedProject.title }}
-            </h3>
-            <UButton
-              color="neutral"
-              variant="ghost"
-              icon="i-heroicons-x-mark"
-              @click="selectedProject = null"
-            />
-          </div>
-        </template>
+    <UModal v-model:open="isModalOpen" :title="selectedProject?.title">
+      <template #body>
+        <div v-if="selectedProject" class="w-full max-w-4xl">
+          <div class="space-y-6">
+            <!-- Project Image -->
+            <div
+              class="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center"
+            >
+              <UIcon
+                :name="selectedProject.icon"
+                class="w-20 h-20 text-blue-600"
+              />
+            </div>
 
-        <div class="space-y-6">
-          <!-- Project Image -->
-          <div
-            class="relative h-64 bg-gradient-to-br from-blue-100 to-blue-200 rounded-lg flex items-center justify-center"
-          >
-            <UIcon
-              :name="selectedProject.icon"
-              class="w-20 h-20 text-blue-600"
-            />
-          </div>
+            <!-- Project Info -->
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                  Project Overview
+                </h4>
+                <p class="text-gray-600 mb-4">
+                  {{ selectedProject.description }}
+                </p>
+                <div class="space-y-2">
+                  <div class="flex items-center gap-2">
+                    <UIcon
+                      name="i-heroicons-calendar"
+                      class="w-4 h-4 text-gray-500"
+                    />
+                    <span class="text-sm text-gray-600"
+                      >Completed: {{ selectedProject.completed }}</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <UIcon
+                      name="i-heroicons-clock"
+                      class="w-4 h-4 text-gray-500"
+                    />
+                    <span class="text-sm text-gray-600"
+                      >Duration: {{ selectedProject.duration }}</span
+                    >
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <UIcon
+                      name="i-heroicons-user-group"
+                      class="w-4 h-4 text-gray-500"
+                    />
+                    <span class="text-sm text-gray-600"
+                      >Team: {{ selectedProject.team }}</span
+                    >
+                  </div>
+                </div>
+              </div>
 
-          <!-- Project Info -->
-          <div class="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 class="text-lg font-semibold text-gray-900 mb-3">
-                Project Overview
-              </h4>
-              <p class="text-gray-600 mb-4">
-                {{ selectedProject.description }}
-              </p>
-              <div class="space-y-2">
-                <div class="flex items-center gap-2">
-                  <UIcon
-                    name="i-heroicons-calendar"
-                    class="w-4 h-4 text-gray-500"
-                  />
-                  <span class="text-sm text-gray-600"
-                    >Completed: {{ selectedProject.completed }}</span
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                  Technologies Used
+                </h4>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <UBadge
+                    v-for="tech in selectedProject.technologies"
+                    :key="tech"
+                    color="primary"
+                    variant="soft"
                   >
+                    {{ tech }}
+                  </UBadge>
                 </div>
-                <div class="flex items-center gap-2">
-                  <UIcon
-                    name="i-heroicons-clock"
-                    class="w-4 h-4 text-gray-500"
-                  />
-                  <span class="text-sm text-gray-600"
-                    >Duration: {{ selectedProject.duration }}</span
+
+                <h4 class="text-lg font-semibold text-gray-900 mb-3">
+                  Key Features
+                </h4>
+                <ul class="space-y-2">
+                  <li
+                    v-for="feature in selectedProject.features"
+                    :key="feature"
+                    class="flex items-start gap-2"
                   >
-                </div>
-                <div class="flex items-center gap-2">
-                  <UIcon
-                    name="i-heroicons-user-group"
-                    class="w-4 h-4 text-gray-500"
-                  />
-                  <span class="text-sm text-gray-600"
-                    >Team: {{ selectedProject.team }}</span
-                  >
-                </div>
+                    <UIcon
+                      name="i-heroicons-check-circle"
+                      class="w-4 h-4 text-green-500 mt-0.5"
+                    />
+                    <span class="text-sm text-gray-600">{{ feature }}</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
+            <!-- Case Study -->
             <div>
               <h4 class="text-lg font-semibold text-gray-900 mb-3">
-                Technologies Used
+                Case Study
               </h4>
-              <div class="flex flex-wrap gap-2 mb-4">
-                <UBadge
-                  v-for="tech in selectedProject.technologies"
-                  :key="tech"
-                  color="primary"
-                  variant="soft"
-                >
-                  {{ tech }}
-                </UBadge>
+              <div class="bg-gray-50 p-4 rounded-lg">
+                <h5 class="font-semibold text-gray-900 mb-2">Challenge</h5>
+                <p class="text-gray-600 mb-4">
+                  {{ selectedProject.challenge }}
+                </p>
+
+                <h5 class="font-semibold text-gray-900 mb-2">Solution</h5>
+                <p class="text-gray-600 mb-4">{{ selectedProject.solution }}</p>
+
+                <h5 class="font-semibold text-gray-900 mb-2">Results</h5>
+                <p class="text-gray-600">{{ selectedProject.results }}</p>
               </div>
-
-              <h4 class="text-lg font-semibold text-gray-900 mb-3">
-                Key Features
-              </h4>
-              <ul class="space-y-2">
-                <li
-                  v-for="feature in selectedProject.features"
-                  :key="feature"
-                  class="flex items-start gap-2"
-                >
-                  <UIcon
-                    name="i-heroicons-check-circle"
-                    class="w-4 h-4 text-green-500 mt-0.5"
-                  />
-                  <span class="text-sm text-gray-600">{{ feature }}</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- Case Study -->
-          <div>
-            <h4 class="text-lg font-semibold text-gray-900 mb-3">Case Study</h4>
-            <div class="bg-gray-50 p-4 rounded-lg">
-              <h5 class="font-semibold text-gray-900 mb-2">Challenge</h5>
-              <p class="text-gray-600 mb-4">{{ selectedProject.challenge }}</p>
-
-              <h5 class="font-semibold text-gray-900 mb-2">Solution</h5>
-              <p class="text-gray-600 mb-4">{{ selectedProject.solution }}</p>
-
-              <h5 class="font-semibold text-gray-900 mb-2">Results</h5>
-              <p class="text-gray-600">{{ selectedProject.results }}</p>
             </div>
           </div>
         </div>
+      </template>
 
-        <template #footer>
-          <div class="flex justify-end gap-3">
-            <UButton variant="outline" @click="selectedProject = null">
-              Close
-            </UButton>
-            <UButton color="primary" @click="contactUs">
-              Start Similar Project
-            </UButton>
-          </div>
-        </template>
-      </UCard>
+      <template #footer>
+        <div class="flex justify-between gap-3">
+          <UButton color="primary" @click="contactUs">
+            Start Similar Project
+          </UButton>
+          <UButton variant="outline" @click="closeProjectModal">
+            Close
+          </UButton>
+        </div>
+      </template>
     </UModal>
   </div>
 </template>
@@ -422,6 +409,7 @@ const categories = [
 ];
 const selectedCategory = ref("all");
 const selectedProject = ref<Project | null>(null);
+const isModalOpen = ref(false);
 
 // Computed properties
 const filteredProjects = computed(() => {
@@ -448,6 +436,26 @@ const getCategoryColor = (
 const contactUs = () => {
   navigateTo("/contact");
 };
+
+const openProjectModal = (project: Project) => {
+  selectedProject.value = project;
+  isModalOpen.value = true;
+};
+
+const closeProjectModal = () => {
+  isModalOpen.value = false;
+  selectedProject.value = null;
+};
+
+// Watch for route changes to close modal
+watch(
+  () => useRoute().path,
+  () => {
+    if (isModalOpen.value) {
+      closeProjectModal();
+    }
+  }
+);
 </script>
 
 <style scoped>

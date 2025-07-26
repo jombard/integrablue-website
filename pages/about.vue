@@ -1,21 +1,11 @@
 <template>
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <section
-      class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 lg:py-32"
-    >
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            About <span class="text-blue-200">IntegraBlue Web Agency</span>
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            We're passionate about helping small businesses and startups succeed
-            in the digital world
-          </p>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      title-white="About"
+      title-blue="IntegraBlue Web Agency"
+      description="We're passionate about helping small businesses and startups succeed in the digital world"
+    />
 
     <!-- Company Story and Mission -->
     <section class="py-20 bg-white max-w-7xl mx-auto">
@@ -180,7 +170,7 @@
     </section>
 
     <!-- Team Section (Placeholder) -->
-    <section class="py-20 bg-white max-w-7xl mx-auto">
+    <!-- <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
@@ -210,10 +200,10 @@
           <UButton color="primary" size="lg"> Join Our Team </UButton>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Why Choose IntegraBlue -->
-    <section class="py-20 bg-gray-50">
+    <section class="py-20 bg-white">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
@@ -339,33 +329,10 @@
     </section>
 
     <!-- Call to Action -->
-    <section class="py-20 bg-blue-900 text-white">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Work Together?
-        </h2>
-        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Let's discuss how IntegraBlue can help your business succeed online
-        </p>
-        <div class="flex sm:flex-row gap-4 justify-center">
-          <UButton
-            size="lg"
-            color="primary"
-            variant="solid"
-            class="font-semibold"
-          >
-            Get Started
-          </UButton>
-          <UButton
-            size="lg"
-            variant="outline"
-            class="border-white text-white hover:bg-white hover:text-blue-900"
-          >
-            View Our Work
-          </UButton>
-        </div>
-      </div>
-    </section>
+    <CallToActionSection
+      title="Ready to Work Together?"
+      description="Let's discuss how IntegraBlue can help your business succeed online"
+    />
   </div>
 </template>
 

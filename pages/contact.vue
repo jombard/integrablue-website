@@ -1,21 +1,11 @@
 <template>
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <section
-      class="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20"
-    >
-      <div class="ui-container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Get In <span class="text-blue-200">Touch</span>
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            Ready to start your next project? Let's discuss how we can help your
-            business grow online.
-          </p>
-        </div>
-      </div>
-    </section>
+    <HeroSection
+      title-white="Get In"
+      title-blue="Touch"
+      description="Ready to start your next project? Let's discuss how we can help your business grow online."
+    />
 
     <!-- Contact Content -->
     <section class="py-20 max-w-7xl mx-auto">
@@ -296,7 +286,7 @@
               <button
                 type="submit"
                 :disabled="isSubmitting"
-                class="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
+                class="w-full bg-blue-700 hover:bg-blue-700 disabled:bg-blue-400 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center"
               >
                 <span v-if="isSubmitting" class="mr-2">
                   <svg
@@ -340,7 +330,7 @@
                 <div class="space-y-4">
                   <div class="flex items-start gap-3">
                     <svg
-                      class="w-5 h-5 text-blue-600 mt-1"
+                      class="w-5 h-5 text-blue-700 mt-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -355,7 +345,7 @@
                       <p class="font-medium text-gray-900">Email</p>
                       <a
                         href="mailto:hello@integrablue.com"
-                        class="text-blue-600 hover:text-blue-800"
+                        class="text-blue-700 hover:text-blue-800"
                       >
                         hello@integrablue.com
                       </a>
@@ -363,27 +353,7 @@
                   </div>
                   <div class="flex items-start gap-3">
                     <svg
-                      class="w-5 h-5 text-blue-600 mt-1"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"
-                      />
-                    </svg>
-                    <div>
-                      <p class="font-medium text-gray-900">Phone</p>
-                      <a
-                        href="tel:+1234567890"
-                        class="text-blue-600 hover:text-blue-800"
-                      >
-                        +1 (234) 567-8900
-                      </a>
-                    </div>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg
-                      class="w-5 h-5 text-blue-600 mt-1"
+                      class="w-5 h-5 text-blue-700 mt-1"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -396,7 +366,7 @@
                     <div>
                       <p class="font-medium text-gray-900">Business Hours</p>
                       <p class="text-gray-600">
-                        Monday - Friday: 9:00 AM - 6:00 PM EST
+                        Monday - Friday: 9:00 AM - 6:00 PM UTC
                       </p>
                     </div>
                   </div>
@@ -411,7 +381,7 @@
                 <div class="space-y-3">
                   <div class="flex items-center gap-2">
                     <svg
-                      class="w-5 h-5 text-green-600"
+                      class="w-5 h-5 text-blue-700"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -427,7 +397,7 @@
                   </div>
                   <div class="flex items-center gap-2">
                     <svg
-                      class="w-5 h-5 text-green-600"
+                      class="w-5 h-5 text-blue-700"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -441,7 +411,7 @@
                   </div>
                   <div class="flex items-center gap-2">
                     <svg
-                      class="w-5 h-5 text-green-600"
+                      class="w-5 h-5 text-blue-700"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -464,7 +434,7 @@
                 <div class="space-y-3">
                   <div class="flex items-center gap-2">
                     <svg
-                      class="w-4 h-4 text-blue-600"
+                      class="w-4 h-4 text-blue-700"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -476,7 +446,7 @@
                   </div>
                   <div class="flex items-center gap-2">
                     <svg
-                      class="w-4 h-4 text-blue-600"
+                      class="w-4 h-4 text-blue-700"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -490,7 +460,7 @@
                   </div>
                   <div class="flex items-center gap-2">
                     <svg
-                      class="w-4 h-4 text-blue-600"
+                      class="w-4 h-4 text-blue-700"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -501,20 +471,6 @@
                       />
                     </svg>
                     <span class="text-gray-700">Software Development</span>
-                  </div>
-                  <div class="flex items-center gap-2">
-                    <svg
-                      class="w-4 h-4 text-blue-600"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                    <span class="text-gray-700">SEO & Marketing</span>
                   </div>
                 </div>
               </div>
@@ -530,12 +486,12 @@
                 </p>
                 <div class="flex gap-3">
                   <button
-                    class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+                    class="px-4 py-2 border border-blue-700 text-blue-700 rounded-lg hover:bg-blue-50 transition-colors"
                   >
                     View FAQ
                   </button>
                   <button
-                    class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    class="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Schedule Call
                   </button>
@@ -580,7 +536,7 @@
             <ul class="space-y-2 text-sm text-gray-600">
               <li class="flex items-start gap-2">
                 <svg
-                  class="w-4 h-4 text-blue-600 mt-0.5"
+                  class="w-4 h-4 text-blue-700 mt-0.5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -594,7 +550,7 @@
               </li>
               <li class="flex items-start gap-2">
                 <svg
-                  class="w-4 h-4 text-blue-600 mt-0.5"
+                  class="w-4 h-4 text-blue-700 mt-0.5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -608,7 +564,7 @@
               </li>
               <li class="flex items-start gap-2">
                 <svg
-                  class="w-4 h-4 text-blue-600 mt-0.5"
+                  class="w-4 h-4 text-blue-700 mt-0.5"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -633,7 +589,7 @@
           </button>
           <button
             @click="goHome"
-            class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            class="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-700 transition-colors"
           >
             Back to Home
           </button>

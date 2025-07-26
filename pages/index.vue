@@ -1,39 +1,29 @@
 <template>
   <div class="min-h-screen bg-white">
     <!-- Hero Section -->
-    <section
-      class="relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 text-white py-20 lg:py-32"
+    <HeroSection
+      title-white="Modern Web Solutions for"
+      title-blue="Growing Businesses"
+      description="We build fast, beautiful, and scalable websites that help small businesses and startups succeed online."
     >
-      <div class="ui-container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Modern Web Solutions for
-            <span class="text-blue-200">Growing Businesses</span>
-          </h1>
-          <p class="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
-            We build fast, beautiful, and scalable websites that help small
-            businesses and startups succeed online.
-          </p>
-          <div class="flex sm:flex-row gap-4 justify-center">
-            <UButton
-              size="lg"
-              color="primary"
-              variant="solid"
-              class="font-semibold"
-            >
-              Get Started
-            </UButton>
-            <UButton
-              size="lg"
-              variant="outline"
-              class="border-white text-white hover:bg-white hover:text-blue-900"
-            >
-              View Our Work
-            </UButton>
-          </div>
-        </div>
-      </div>
-    </section>
+      <UButton
+        size="lg"
+        color="primary"
+        variant="solid"
+        class="font-semibold"
+        @click="navigateTo('/contact')"
+      >
+        Get Started
+      </UButton>
+      <UButton
+        size="lg"
+        variant="outline"
+        class="border-white text-white hover:bg-white hover:text-blue-900"
+        @click="navigateTo('/portfolio')"
+      >
+        View Our Work
+      </UButton>
+    </HeroSection>
 
     <!-- Services Overview Section -->
     <section class="py-20 bg-gray-50">
@@ -64,7 +54,12 @@
               Beautiful, user-friendly designs that convert visitors into
               customers
             </p>
-            <UButton variant="link" color="primary" class="p-0">
+            <UButton
+              variant="link"
+              color="primary"
+              class="p-0"
+              @click="navigateTo('/services#web-design')"
+            >
               Learn More →
             </UButton>
           </div>
@@ -86,7 +81,12 @@
             <p class="text-gray-600 mb-4">
               Fast, responsive websites built with modern technologies
             </p>
-            <UButton variant="link" color="primary" class="p-0">
+            <UButton
+              variant="link"
+              color="primary"
+              class="p-0"
+              @click="navigateTo('/services#web-development')"
+            >
               Learn More →
             </UButton>
           </div>
@@ -108,7 +108,12 @@
             <p class="text-gray-600 mb-4">
               Custom software solutions to streamline your business operations
             </p>
-            <UButton variant="link" color="primary" class="p-0">
+            <UButton
+              variant="link"
+              color="primary"
+              class="p-0"
+              @click="navigateTo('/services#software-solutions')"
+            >
               Learn More →
             </UButton>
           </div>
@@ -201,7 +206,11 @@
               <p class="text-gray-600 mb-6">
                 Let's discuss how we can help your business succeed online
               </p>
-              <UButton color="primary" size="lg">
+              <UButton
+                color="primary"
+                size="lg"
+                @click="navigateTo('/contact')"
+              >
                 Schedule a Consultation
               </UButton>
             </div>
@@ -211,34 +220,10 @@
     </section>
 
     <!-- Call-to-Action Section -->
-    <section class="py-20 bg-blue-900 text-white">
-      <div class="ui-container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Transform Your Online Presence?
-        </h2>
-        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-          Join the growing number of businesses that trust IntegraBlue to build
-          their digital future
-        </p>
-        <div class="flex sm:flex-row gap-4 justify-center">
-          <UButton
-            size="lg"
-            color="primary"
-            variant="solid"
-            class="text-blue-900 font-semibold"
-          >
-            Start Your Project
-          </UButton>
-          <UButton
-            size="lg"
-            variant="outline"
-            class="border-white text-white hover:bg-white hover:text-blue-900"
-          >
-            View Portfolio
-          </UButton>
-        </div>
-      </div>
-    </section>
+    <CallToActionSection
+      title="Ready to Transform Your Online Presence?"
+      description="Join the growing number of businesses that trust IntegraBlue to build their digital future"
+    />
 
     <!-- Client Testimonials Section -->
     <section class="py-20 bg-gray-50">
@@ -257,11 +242,11 @@
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="flex items-center mb-4">
               <div class="flex text-yellow-400">
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
               </div>
             </div>
             <p class="text-gray-600 mb-6 italic">
@@ -285,11 +270,11 @@
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="flex items-center mb-4">
               <div class="flex text-yellow-400">
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
               </div>
             </div>
             <p class="text-gray-600 mb-6 italic">
@@ -314,11 +299,11 @@
           <div class="bg-white p-8 rounded-lg shadow-lg">
             <div class="flex items-center mb-4">
               <div class="flex text-yellow-400">
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
+                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
               </div>
             </div>
             <p class="text-gray-600 mb-6 italic">
