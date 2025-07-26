@@ -1,6 +1,10 @@
 <template>
   <div>
-    <slot />
+    <SiteNavigation />
+    <main class="pt-16">
+      <slot />
+    </main>
+    <SiteFooter />
   </div>
 </template>
 
