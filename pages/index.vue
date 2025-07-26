@@ -261,8 +261,8 @@
                 <UIcon name="i-heroicons-user" class="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <p class="font-semibold text-gray-900">Sarah Johnson</p>
-                <p class="text-sm text-gray-500">CEO, TechStart Solutions</p>
+                <p class="font-semibold text-gray-900">S. Johnson</p>
+                <p class="text-sm text-gray-500">CEO, Technology Startup</p>
               </div>
             </div>
           </div>
@@ -288,9 +288,9 @@
                 <UIcon name="i-heroicons-user" class="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <p class="font-semibold text-gray-900">Michael Chen</p>
+                <p class="font-semibold text-gray-900">M. Chen</p>
                 <p class="text-sm text-gray-500">
-                  Founder, GreenLeaf Consulting
+                  Founder, Business Consulting Firm
                 </p>
               </div>
             </div>
@@ -317,9 +317,9 @@
                 <UIcon name="i-heroicons-user" class="w-6 h-6 text-blue-600" />
               </div>
               <div>
-                <p class="font-semibold text-gray-900">Emily Rodriguez</p>
+                <p class="font-semibold text-gray-900">E. Rodriguez</p>
                 <p class="text-sm text-gray-500">
-                  Marketing Director, Bright Ideas Co.
+                  Marketing Director, Creative Agency
                 </p>
               </div>
             </div>
