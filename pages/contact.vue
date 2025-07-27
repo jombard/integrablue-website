@@ -346,10 +346,10 @@
                     <div>
                       <p class="font-medium text-gray-900">Email</p>
                       <a
-                        href="mailto:hello@integrablue.com"
+                        href="mailto:hello@integrablue.co.uk"
                         class="text-blue-700 hover:text-blue-800"
                       >
-                        hello@integrablue.com
+                        hello@integrablue.co.uk
                       </a>
                     </div>
                   </div>

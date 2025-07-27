@@ -59,7 +59,9 @@
           <ul class="space-y-2 text-gray-300">
             <li class="flex items-center">
               <UIcon name="i-heroicons-envelope" class="w-4 h-4 mr-2" />
-              <a href="mailto:hello@integrablue.com">hello@integrablue.com</a>
+              <a href="mailto:hello@integrablue.co.uk"
+                >hello@integrablue.co.uk</a
+              >
             </li>
             <li class="flex items-center">
               <UIcon name="i-heroicons-map-pin" class="w-4 h-4 mr-2" />

@@ -5,10 +5,9 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui"],
   css: ["~/assets/css/main.css"],
 
-  // GitHub Pages configuration
+  // App configuration
   app: {
-    baseURL:
-      process.env.NODE_ENV === "production" ? "/integrablue-website/" : "/",
+    baseURL: "/",
     buildAssetsDir: "/_nuxt/",
     head: {
       title: "IntegraBlue Web Agency",
@@ -26,7 +25,7 @@ export default defineNuxtConfig({
             "Modern web agency for small businesses and startups. Specializing in Nuxt 3, Vue.js, and minimalist design.",
         },
         { property: "og:type", content: "website" },
-        { property: "og:url", content: "https://yourdomain.com/" },
+        { property: "og:url", content: "https://integrablue.co.uk/" },
         { property: "og:image", content: "/favicon.ico" },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "IntegraBlue Web Agency" },
