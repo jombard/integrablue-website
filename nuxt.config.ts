@@ -7,7 +7,8 @@ export default defineNuxtConfig({
 
   // GitHub Pages configuration
   app: {
-    baseURL: "/",
+    baseURL:
+      process.env.NODE_ENV === "production" ? "/integrablue-website/" : "/",
     buildAssetsDir: "/_nuxt/",
     head: {
       title: "IntegraBlue Web Agency",
