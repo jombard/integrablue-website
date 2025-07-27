@@ -137,7 +137,7 @@
                 <select
                   v-model="form.projectType"
                   :class="[
-                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10 text-gray-500',
                     errors.projectType
                       ? 'border-red-500 bg-red-50'
                       : 'border-gray-300 ',
@@ -170,7 +170,7 @@
                 <select
                   v-model="form.budget"
                   :class="[
-                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10 text-gray-500',
                     errors.budget
                       ? 'border-red-500 bg-red-50'
                       : 'border-gray-300 ',
@@ -203,7 +203,7 @@
                 <select
                   v-model="form.timeline"
                   :class="[
-                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10 text-gray-500',
                     errors.timeline
                       ? 'border-red-500 bg-red-50'
                       : 'border-gray-300 ',
@@ -238,7 +238,7 @@
                   rows="6"
                   placeholder="Tell us about your project, goals, and any specific requirements..."
                   :class="[
-                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none',
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none text-gray-500',
                     errors.message
                       ? 'border-red-500 bg-red-50'
                       : 'border-gray-300  placeholder-gray-400',
@@ -258,7 +258,7 @@
                 <select
                   v-model="form.referral"
                   :class="[
-                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10',
+                    'w-full px-4 py-3 rounded-lg border transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-no-repeat bg-right pr-10 text-gray-500',
                     errors.referral
                       ? 'border-red-500 bg-red-50'
                       : 'border-gray-300 ',
@@ -512,17 +512,10 @@
     >
       <div class="bg-white rounded-lg max-w-md w-full p-6">
         <div class="flex items-center gap-3 mb-4">
-          <svg
+          <UIcon
+            name="i-heroicons-check-circle"
             class="w-6 h-6 text-green-600"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-              clip-rule="evenodd"
-            />
-          </svg>
+          />
           <h3 class="text-lg font-semibold text-gray-900">
             Message Sent Successfully!
           </h3>
@@ -537,45 +530,24 @@
             <h4 class="font-semibold text-gray-900 mb-2">What happens next?</h4>
             <ul class="space-y-2 text-sm text-gray-600">
               <li class="flex items-start gap-2">
-                <svg
+                <UIcon
+                  name="i-heroicons-arrow-right"
                   class="w-4 h-4 text-blue-700 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                />
                 <span>We'll review your project requirements</span>
               </li>
               <li class="flex items-start gap-2">
-                <svg
+                <UIcon
+                  name="i-heroicons-arrow-right"
                   class="w-4 h-4 text-blue-700 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                />
                 <span>Schedule a consultation call to discuss details</span>
               </li>
               <li class="flex items-start gap-2">
-                <svg
+                <UIcon
+                  name="i-heroicons-arrow-right"
                   class="w-4 h-4 text-blue-700 mt-0.5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
+                />
                 <span>Provide a detailed project proposal and timeline</span>
               </li>
             </ul>
@@ -583,21 +555,22 @@
         </div>
 
         <div class="flex justify-end gap-3 mt-6">
-          <button
-            @click="showSuccessModal = false"
-            class="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
-          >
+          <UButton variant="outline" @click="showSuccessModal = false">
             Close
-          </button>
-          <button
-            @click="goHome"
-            class="px-4 py-2 bg-blue-700 text-white rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Back to Home
-          </button>
+          </UButton>
+          <UButton color="primary" @click="goHome"> Back to Home </UButton>
         </div>
       </div>
     </div>
+
+    <!-- Error Modal -->
+    <ErrorMessage
+      :show="showErrorModal"
+      :title="errorTitle"
+      :message="errorMessage"
+      :retry="retrySubmission"
+      @close="showErrorModal = false"
+    />
   </div>
 </template>
 
@@ -639,10 +612,14 @@ const errors = ref({
 // Form state
 const isSubmitting = ref(false);
 const showSuccessModal = ref(false);
+const showErrorModal = ref(false);
+const errorTitle = ref("");
+const errorMessage = ref("");
 
-// Ensure success modal is hidden on page load
+// Ensure modals are hidden on page load
 onMounted(() => {
   showSuccessModal.value = false;
+  showErrorModal.value = false;
 });
 
 // Form options
@@ -757,8 +734,11 @@ const submitForm = async () => {
   isSubmitting.value = true;
 
   try {
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    // Send form data to API
+    const response = await $fetch("/api/contact", {
+      method: "POST",
+      body: form.value,
+    });
 
     // Reset form
     form.value = {
@@ -776,12 +756,31 @@ const submitForm = async () => {
 
     // Show success modal
     showSuccessModal.value = true;
-  } catch (error) {
+  } catch (error: any) {
     console.error("Form submission error:", error);
-    // Handle error (show error message, etc.)
+
+    // Handle different types of errors
+    if (error.statusCode === 400) {
+      // Validation error
+      errorTitle.value = "Validation Error";
+      errorMessage.value =
+        error.statusMessage || "Please check your form and try again.";
+    } else {
+      // Server error
+      errorTitle.value = "Submission Error";
+      errorMessage.value =
+        "Sorry, there was an error sending your message. Please try again later or contact us directly.";
+    }
+    showErrorModal.value = true;
   } finally {
     isSubmitting.value = false;
   }
+};
+
+// Retry submission
+const retrySubmission = () => {
+  showErrorModal.value = false;
+  submitForm();
 };
 
 // Navigation
