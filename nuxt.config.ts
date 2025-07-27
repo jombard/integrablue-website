@@ -4,7 +4,11 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/ui"],
   css: ["~/assets/css/main.css"],
+
+  // GitHub Pages configuration
   app: {
+    baseURL: "/",
+    buildAssetsDir: "/_nuxt/",
     head: {
       title: "IntegraBlue Web Agency",
       meta: [
@@ -33,6 +37,14 @@ export default defineNuxtConfig({
         { name: "twitter:image", content: "/favicon.ico" },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
+
+  // Runtime config for form endpoint
+  runtimeConfig: {
+    public: {
+      formEndpoint:
+        process.env.FORM_ENDPOINT || "https://formspree.io/f/mnnzvarw",
     },
   },
 });

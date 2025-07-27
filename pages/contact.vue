@@ -659,7 +659,7 @@ const referralSources = [
   { label: "Other", value: "other" },
 ];
 
-// Validation functions
+// Simple client-side validation
 const validateField = (field: string) => {
   errors.value[field as keyof typeof errors.value] = "";
 
@@ -734,10 +734,27 @@ const submitForm = async () => {
   isSubmitting.value = true;
 
   try {
-    // Send form data to API
-    const response = await $fetch("/api/contact", {
+    // For GitHub Pages, we'll use Formspree
+    const formData = new FormData();
+
+    // Add all form fields to FormData
+    Object.entries(form.value).forEach(([key, value]) => {
+      if (value) {
+        formData.append(key, value);
+      }
+    });
+
+    // Get form endpoint from runtime config
+    const config = useRuntimeConfig();
+    const formEndpoint = config.public.formEndpoint;
+
+    // Send to Formspree
+    const response = await fetch(formEndpoint, {
       method: "POST",
-      body: form.value,
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
     });
 
     // Reset form
