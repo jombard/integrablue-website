@@ -10,11 +10,12 @@
     <!-- Company Story and Mission -->
     <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeader
+          title="Our Story"
+          description="The journey that led us to where we are today"
+        />
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6">
-              Our Story
-            </h2>
             <p class="text-lg text-gray-600 mb-6">
               Founded in 2024, IntegraBlue Web Agency was born from a simple
               belief: every business, regardless of size, deserves access to
@@ -59,112 +60,42 @@
     <!-- Company Values -->
     <section class="py-20 bg-gray-50">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            Our Values
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            The principles that guide everything we do
-          </p>
-        </div>
+        <SectionHeader
+          title="Our Values"
+          description="The principles that guide everything we do"
+        />
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon name="i-heroicons-heart" class="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Passion for Quality
-            </h3>
-            <p class="text-gray-600">
-              We believe that every project, no matter the size, deserves our
-              full attention and commitment to excellence.
-            </p>
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon name="i-heroicons-users" class="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Client Partnership
-            </h3>
-            <p class="text-gray-600">
-              We work closely with our clients, treating their success as our
-              success and building long-term relationships.
-            </p>
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon
-                name="i-heroicons-sparkles"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Innovation</h3>
-            <p class="text-gray-600">
-              We stay at the forefront of web technologies to deliver
-              cutting-edge solutions that give our clients a competitive edge.
-            </p>
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon
-                name="i-heroicons-shield-check"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Transparency
-            </h3>
-            <p class="text-gray-600">
-              We believe in clear communication, honest pricing, and keeping our
-              clients informed every step of the way.
-            </p>
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon name="i-heroicons-clock" class="w-6 h-6 text-blue-600" />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Reliability
-            </h3>
-            <p class="text-gray-600">
-              We deliver on our promises, meet deadlines, and provide ongoing
-              support to ensure our clients' success.
-            </p>
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon
-                name="i-heroicons-academic-cap"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Continuous Learning
-            </h3>
-            <p class="text-gray-600">
-              We're constantly learning and improving our skills to provide the
-              best possible solutions for our clients.
-            </p>
-          </div>
+          <ValueCard
+            title="Passion for Quality"
+            description="We believe that every project, no matter the size, deserves our full attention and commitment to excellence."
+            icon="i-heroicons-heart"
+          />
+          <ValueCard
+            title="Client Partnership"
+            description="We work closely with our clients, treating their success as our success and building long-term relationships."
+            icon="i-heroicons-users"
+          />
+          <ValueCard
+            title="Innovation"
+            description="We stay at the forefront of web technologies to deliver cutting-edge solutions that give our clients a competitive edge."
+            icon="i-heroicons-sparkles"
+          />
+          <ValueCard
+            title="Transparency"
+            description="We believe in clear communication, honest pricing, and keeping our clients informed every step of the way."
+            icon="i-heroicons-shield-check"
+          />
+          <ValueCard
+            title="Reliability"
+            description="We deliver on our promises, meet deadlines, and provide ongoing support to ensure our clients' success."
+            icon="i-heroicons-clock"
+          />
+          <ValueCard
+            title="Continuous Learning"
+            description="We're constantly learning and improving our skills to provide the best possible solutions for our clients."
+            icon="i-heroicons-academic-cap"
+          />
         </div>
       </div>
     </section>
@@ -172,14 +103,10 @@
     <!-- Team Section (Placeholder) -->
     <!-- <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            Our Team
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Meet the passionate professionals behind IntegraBlue
-          </p>
-        </div>
+        <SectionHeader
+          title="Why Choose IntegraBlue Web Agency?"
+          description="What sets us apart from other web agencies"
+        />
 
         <div
           class="bg-gradient-to-br from-blue-50 to-blue-100 p-12 rounded-lg text-center"
@@ -205,84 +132,29 @@
     <!-- Why Choose IntegraBlue -->
     <section class="py-20 bg-white">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            Why Choose IntegraBlue Web Agency?
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            What sets us apart from other web agencies
-          </p>
-        </div>
+        <SectionHeader
+          title="Why Choose IntegraBlue Web Agency?"
+          description="What sets us apart from other web agencies"
+        />
 
         <div class="grid lg:grid-cols-2 gap-12">
           <div class="space-y-8">
-            <div class="flex items-start gap-4">
-              <div
-                class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-              >
-                <UIcon name="i-heroicons-check" class="w-4 h-4 text-blue-600" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-gray-900 mb-2">
-                  Small Business Specialists
-                </h3>
-                <p class="text-gray-600">
-                  We understand the unique challenges and opportunities that
-                  small businesses face in the digital landscape.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div
-                class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-              >
-                <UIcon name="i-heroicons-check" class="w-4 h-4 text-blue-600" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-gray-900 mb-2">
-                  Modern Technology Stack
-                </h3>
-                <p class="text-gray-600">
-                  We use the latest technologies like Nuxt 3, Vue.js, and modern
-                  CSS frameworks to build fast, scalable websites.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div
-                class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-              >
-                <UIcon name="i-heroicons-check" class="w-4 h-4 text-blue-600" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-gray-900 mb-2">
-                  Transparent Pricing
-                </h3>
-                <p class="text-gray-600">
-                  No hidden fees or surprises. We provide clear, upfront pricing
-                  for all our services.
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-4">
-              <div
-                class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-              >
-                <UIcon name="i-heroicons-check" class="w-4 h-4 text-blue-600" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-gray-900 mb-2">
-                  Ongoing Support
-                </h3>
-                <p class="text-gray-600">
-                  We don't just build your website and walk away. We're here to
-                  help you grow and succeed.
-                </p>
-              </div>
-            </div>
+            <CheckItem
+              title="Small Business Specialists"
+              description="We understand the unique challenges and opportunities that small businesses face in the digital landscape."
+            />
+            <CheckItem
+              title="Modern Technology Stack"
+              description="We use the latest technologies like Nuxt 3, Vue.js, and modern CSS frameworks to build fast, scalable websites."
+            />
+            <CheckItem
+              title="Transparent Pricing"
+              description="No hidden fees or surprises. We provide clear, upfront pricing for all our services."
+            />
+            <CheckItem
+              title="Ongoing Support"
+              description="We don't just build your website and walk away. We're here to help you grow and succeed."
+            />
           </div>
 
           <div class="bg-white p-8 rounded-lg shadow-lg">

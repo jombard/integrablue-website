@@ -10,15 +10,10 @@
     <!-- Services Overview -->
     <section class="py-20 bg-gray-50">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            What We Offer
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            From initial concept to ongoing support, we handle every aspect of
-            your digital presence
-          </p>
-        </div>
+        <SectionHeader
+          title="What We Offer"
+          description="From initial concept to ongoing support, we handle every aspect of your digital presence"
+        />
 
         <div class="grid lg:grid-cols-3 gap-8">
           <div
@@ -165,15 +160,10 @@
     <!-- Service Process/Workflow -->
     <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            Our Process
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            A proven methodology that ensures your project is delivered on time
-            and exceeds expectations
-          </p>
-        </div>
+        <SectionHeader
+          title="Our Process"
+          description="A proven methodology that ensures your project is delivered on time and exceeds expectations"
+        />
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="text-center">
@@ -238,15 +228,10 @@
     <!-- Technology Stack Showcase -->
     <section class="py-20 bg-gray-50">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            Our Technology Stack
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            We use cutting-edge technologies to build fast, scalable, and
-            maintainable solutions
-          </p>
-        </div>
+        <SectionHeader
+          title="Our Technology Stack"
+          description="We use cutting-edge technologies to build fast, scalable, and maintainable solutions"
+        />
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="bg-white p-5 rounded-lg shadow-lg text-center">
@@ -377,14 +362,10 @@
     <!-- Service Details -->
     <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            Service Details
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Comprehensive solutions tailored to your specific needs
-          </p>
-        </div>
+        <SectionHeader
+          title="Service Details"
+          description="Comprehensive solutions tailored to your specific needs"
+        />
 
         <div class="space-y-12">
           <!-- Web Design Details -->

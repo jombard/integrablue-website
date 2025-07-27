@@ -28,95 +28,30 @@
     <!-- Services Overview Section -->
     <section class="py-20 bg-gray-50">
       <div class="ui-container mx-auto px-4 max-w-7xl">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            Our Services
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            From concept to launch, we handle every aspect of your web presence
-          </p>
-        </div>
+        <SectionHeader
+          title="Our Services"
+          description="From concept to launch, we handle every aspect of your web presence"
+        />
 
         <div class="grid md:grid-cols-3 gap-8">
-          <div
-            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-          >
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon
-                name="i-heroicons-paint-brush"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Web Design</h3>
-            <p class="text-gray-600 mb-4">
-              Beautiful, user-friendly designs that convert visitors into
-              customers
-            </p>
-            <UButton
-              variant="link"
-              color="primary"
-              class="p-0"
-              @click="navigateTo('/services#web-design')"
-            >
-              Learn More →
-            </UButton>
-          </div>
-
-          <div
-            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-          >
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon
-                name="i-heroicons-code-bracket"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Web Development
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Fast, responsive websites built with modern technologies
-            </p>
-            <UButton
-              variant="link"
-              color="primary"
-              class="p-0"
-              @click="navigateTo('/services#web-development')"
-            >
-              Learn More →
-            </UButton>
-          </div>
-
-          <div
-            class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
-          >
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
-            >
-              <UIcon
-                name="i-heroicons-cpu-chip"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">
-              Software Development
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Custom software solutions to streamline your business operations
-            </p>
-            <UButton
-              variant="link"
-              color="primary"
-              class="p-0"
-              @click="navigateTo('/services#software-solutions')"
-            >
-              Learn More →
-            </UButton>
-          </div>
+          <ServiceCard
+            title="Web Design"
+            description="Beautiful, user-friendly designs that convert visitors into customers"
+            icon="i-heroicons-paint-brush"
+            link="/services#web-design"
+          />
+          <ServiceCard
+            title="Web Development"
+            description="Fast, responsive websites built with modern technologies"
+            icon="i-heroicons-code-bracket"
+            link="/services#web-development"
+          />
+          <ServiceCard
+            title="Software Development"
+            description="Custom software solutions to streamline your business operations"
+            icon="i-heroicons-cpu-chip"
+            link="/services#software-solutions"
+          />
         </div>
       </div>
     </section>
@@ -124,71 +59,25 @@
     <!-- Value Proposition Section -->
     <section class="py-20 bg-white max-w-7xl mx-auto">
       <div class="ui-container mx-auto px-4">
+        <SectionHeader
+          title="Why Choose IntegraBlue Web Agency?"
+          description="What sets us apart from other web agencies"
+        />
         <div class="grid lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6">
-              Why Choose IntegraBlue Web Agency?
-            </h2>
             <div class="space-y-6">
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-                >
-                  <UIcon
-                    name="i-heroicons-check"
-                    class="w-4 h-4 text-blue-600"
-                  />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-900 mb-2">
-                    Modern Technology Stack
-                  </h3>
-                  <p class="text-gray-600">
-                    Built with Nuxt 3, Vue.js, and the latest web technologies
-                    for optimal performance
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-                >
-                  <UIcon
-                    name="i-heroicons-check"
-                    class="w-4 h-4 text-blue-600"
-                  />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-900 mb-2">
-                    Small Business Focus
-                  </h3>
-                  <p class="text-gray-600">
-                    We understand the unique challenges and opportunities that
-                    small businesses face
-                  </p>
-                </div>
-              </div>
-
-              <div class="flex items-start gap-4">
-                <div
-                  class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1"
-                >
-                  <UIcon
-                    name="i-heroicons-check"
-                    class="w-4 h-4 text-blue-600"
-                  />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-gray-900 mb-2">
-                    Ongoing Support
-                  </h3>
-                  <p class="text-gray-600">
-                    We don't just build your website - we're here to help it
-                    grow and evolve
-                  </p>
-                </div>
-              </div>
+              <CheckItem
+                title="Modern Technology Stack"
+                description="Built with Nuxt 3, Vue.js, and the latest web technologies for optimal performance"
+              />
+              <CheckItem
+                title="Small Business Focus"
+                description="We understand the unique challenges and opportunities that small businesses face"
+              />
+              <CheckItem
+                title="Ongoing Support"
+                description="We don't just build your website - we're here to help it grow and evolve"
+              />
             </div>
           </div>
 
@@ -228,102 +117,27 @@
     <!-- Client Testimonials Section -->
     <section class="py-20 bg-gray-50">
       <div class="ui-container mx-auto px-4 max-w-7xl">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-4">
-            What Our Clients Say
-          </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Don't just take our word for it - hear from the businesses we've
-            helped
-          </p>
-        </div>
+        <SectionHeader
+          title="What Our Clients Say"
+          description="Don't just take our word for it - hear from the businesses we've helped"
+        />
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div class="flex items-center mb-4">
-              <div class="flex text-yellow-400">
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-              </div>
-            </div>
-            <p class="text-gray-600 mb-6 italic">
-              "IntegraBlue transformed our online presence completely. Our new
-              website is fast, beautiful, and has already increased our leads by
-              40%."
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
-              >
-                <UIcon name="i-heroicons-user" class="w-6 h-6 text-blue-600" />
-              </div>
-              <div>
-                <p class="font-semibold text-gray-900">S. Johnson</p>
-                <p class="text-sm text-gray-500">CEO, Technology Startup</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div class="flex items-center mb-4">
-              <div class="flex text-yellow-400">
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-              </div>
-            </div>
-            <p class="text-gray-600 mb-6 italic">
-              "The team at IntegraBlue is professional, responsive, and truly
-              understands what small businesses need. Highly recommended!"
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
-              >
-                <UIcon name="i-heroicons-user" class="w-6 h-6 text-blue-600" />
-              </div>
-              <div>
-                <p class="font-semibold text-gray-900">M. Chen</p>
-                <p class="text-sm text-gray-500">
-                  Founder, Business Consulting Firm
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <div class="flex items-center mb-4">
-              <div class="flex text-yellow-400">
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-                <UIcon name="i-heroicons-star-solid" class="w-5 h-5" />
-              </div>
-            </div>
-            <p class="text-gray-600 mb-6 italic">
-              "From the initial consultation to the final launch, every step was
-              smooth and professional. Our new website exceeded expectations."
-            </p>
-            <div class="flex items-center">
-              <div
-                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
-              >
-                <UIcon name="i-heroicons-user" class="w-6 h-6 text-blue-600" />
-              </div>
-              <div>
-                <p class="font-semibold text-gray-900">E. Rodriguez</p>
-                <p class="text-sm text-gray-500">
-                  Marketing Director, Creative Agency
-                </p>
-              </div>
-            </div>
-          </div>
+          <ClientTestimonial
+            client-name="S. Johnson"
+            title="CEO, Technology Startup"
+            testimonial="IntegraBlue transformed our online presence completely. Our new website is fast, beautiful, and has already increased our leads by 40%."
+          />
+          <ClientTestimonial
+            client-name="M. Chen"
+            title="Founder, Business Consulting Firm"
+            testimonial="The team at IntegraBlue is professional, responsive, and truly understands what small businesses need. Highly recommended!"
+          />
+          <ClientTestimonial
+            client-name="E. Rodriguez"
+            title="Marketing Director, Creative Agency"
+            testimonial="From the initial consultation to the final launch, every step was smooth and professional. Our new website exceeded expectations."
+          />
         </div>
       </div>
     </section>

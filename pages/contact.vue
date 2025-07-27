@@ -13,9 +13,10 @@
         <div class="grid lg:grid-cols-2 gap-16">
           <!-- Contact Form -->
           <div>
-            <h2 class="text-3xl font-bold text-blue-700 mb-8">
-              Send us a message
-            </h2>
+            <SectionHeader
+              title="Send us a message"
+              description="Drop us a message to get started with your project"
+            />
 
             <form @submit.prevent="submitForm" class="space-y-6">
               <!-- Name Fields -->
@@ -317,9 +318,10 @@
 
           <!-- Contact Information -->
           <div>
-            <h2 class="text-3xl font-bold text-blue-700 mb-8">
-              Contact Information
-            </h2>
+            <SectionHeader
+              title="Contact Information"
+              description="Get in touch with us to discuss your project or ask us a question"
+            />
 
             <div class="space-y-8">
               <!-- General Contact -->
