@@ -77,13 +77,13 @@
               Web Development
             </h3>
             <p class="text-gray-600 mb-6">
-              Fast, responsive websites built with modern technologies that
-              scale with your business.
+              Fast, responsive websites built with the right technologies for
+              your specific needs and goals.
             </p>
             <ul class="space-y-2 text-gray-600 mb-6">
               <li class="flex items-center gap-2">
                 <UIcon name="i-heroicons-check" class="w-4 h-4 text-blue-600" />
-                Modern tech stack (Nuxt 3, Vue.js)
+                Technology-agnostic approach
               </li>
               <li class="flex items-center gap-2">
                 <UIcon name="i-heroicons-check" class="w-4 h-4 text-blue-600" />
@@ -225,136 +225,81 @@
       </div>
     </section>
 
-    <!-- Technology Stack Showcase -->
+    <!-- Technology Approach -->
     <section class="py-20 bg-gray-50">
       <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <SectionHeader
-          title="Our Technology Stack"
-          description="We use cutting-edge technologies to build fast, scalable, and maintainable solutions"
+          title="Our Technology Approach"
+          description="We adapt our technology choices to your specific requirements, ensuring the best solution for your project"
         />
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
             <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
             >
               <UIcon
-                name="i-simple-icons-nuxtdotjs"
-                class="w-6 h-6 text-blue-600"
+                name="i-heroicons-light-bulb"
+                class="w-8 h-8 text-blue-600"
               />
             </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Nuxt 3</h3>
+            <h3 class="font-semibold text-gray-900 mb-3">
+              Technology Agnostic
+            </h3>
             <p class="text-sm text-gray-600">
-              Modern Vue.js framework for server-side rendering and static site
-              generation
+              We choose the right technologies based on your project
+              requirements, budget, and long-term goals rather than pushing a
+              specific stack.
             </p>
           </div>
 
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
             <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
             >
               <UIcon
-                name="i-simple-icons-vuedotjs"
-                class="w-6 h-6 text-blue-600"
+                name="i-heroicons-cog-6-tooth"
+                class="w-8 h-8 text-blue-600"
               />
             </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Vue.js</h3>
+            <h3 class="font-semibold text-gray-900 mb-3">Modern & Scalable</h3>
             <p class="text-sm text-gray-600">
-              Progressive JavaScript framework for building user interfaces
+              We work with modern, proven technologies that ensure your solution
+              is fast, secure, and can grow with your business.
             </p>
           </div>
 
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
+          <div class="bg-white p-6 rounded-lg shadow-lg text-center">
             <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
+              class="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
             >
               <UIcon
-                name="i-simple-icons-tailwindcss"
-                class="w-6 h-6 text-blue-600"
+                name="i-heroicons-wrench-screwdriver"
+                class="w-8 h-8 text-blue-600"
               />
             </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Tailwind CSS</h3>
+            <h3 class="font-semibold text-gray-900 mb-3">Maintainable Code</h3>
             <p class="text-sm text-gray-600">
-              Utility-first CSS framework for rapid UI development
+              We write clean, well-documented code that's easy to maintain and
+              extend, regardless of the technology stack chosen.
             </p>
           </div>
+        </div>
 
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
-            >
-              <UIcon
-                name="i-simple-icons-typescript"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">TypeScript</h3>
-            <p class="text-sm text-gray-600">
-              Typed JavaScript for better development experience and code
-              quality
-            </p>
-          </div>
-
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
-            >
-              <UIcon
-                name="i-simple-icons-nodedotjs"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Node.js</h3>
-            <p class="text-sm text-gray-600">
-              JavaScript runtime for server-side development and APIs
-            </p>
-          </div>
-
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
-            >
-              <UIcon
-                name="i-simple-icons-postgresql"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">PostgreSQL</h3>
-            <p class="text-sm text-gray-600">
-              Advanced open-source relational database
-            </p>
-          </div>
-
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
-            >
-              <UIcon
-                name="i-simple-icons-docker"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">Docker</h3>
-            <p class="text-sm text-gray-600">
-              Containerization platform for consistent deployments
-            </p>
-          </div>
-
-          <div class="bg-white p-5 rounded-lg shadow-lg text-center">
-            <div
-              class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4"
-            >
-              <UIcon
-                name="i-simple-icons-github"
-                class="w-6 h-6 text-blue-600"
-              />
-            </div>
-            <h3 class="font-semibold text-gray-900 mb-2">GitHub</h3>
-            <p class="text-sm text-gray-600">
-              Version control and collaboration platform
-            </p>
-          </div>
+        <div class="mt-12 text-center">
+          <p class="text-gray-600 mb-6 max-w-3xl mx-auto">
+            Our expertise spans multiple technologies including React, Vue.js,
+            Angular, Node.js, Python, PHP, various databases, cloud platforms,
+            and more. We'll recommend the best combination for your specific
+            needs.
+          </p>
+          <UButton
+            color="primary"
+            variant="outline"
+            @click="navigateTo('/contact')"
+          >
+            Discuss Your Technology Needs
+          </UButton>
         </div>
       </div>
     </section>
@@ -480,9 +425,10 @@
                 Web Development
               </h3>
               <p class="text-gray-600 mb-6">
-                We build fast, scalable websites using modern technologies and
-                best practices. Our development process ensures your site is not
-                only beautiful but also performant and maintainable.
+                We build fast, scalable websites using the most appropriate
+                technologies for your project. Our technology-agnostic approach
+                means we choose the right tools for your specific needs,
+                ensuring optimal performance and maintainability.
               </p>
               <div class="space-y-4">
                 <div class="flex items-start gap-3">
@@ -492,11 +438,11 @@
                   />
                   <div>
                     <h4 class="font-semibold text-gray-900">
-                      Modern Architecture
+                      Technology Agnostic
                     </h4>
                     <p class="text-gray-600">
-                      Built with scalable, maintainable code that grows with
-                      your business.
+                      We select the best technologies based on your
+                      requirements, budget, and future scalability needs.
                     </p>
                   </div>
                 </div>
@@ -510,7 +456,8 @@
                       Performance Optimized
                     </h4>
                     <p class="text-gray-600">
-                      Fast loading times and excellent Core Web Vitals scores.
+                      Fast loading times and excellent Core Web Vitals scores
+                      regardless of the technology stack.
                     </p>
                   </div>
                 </div>
@@ -580,8 +527,8 @@
               <p class="text-gray-600 mb-6">
                 We create custom software solutions that streamline your
                 business operations, improve efficiency, and provide competitive
-                advantages. From web applications to APIs, we build solutions
-                that scale.
+                advantages. Our flexible approach allows us to use the most
+                suitable technologies for your specific requirements.
               </p>
               <div class="space-y-4">
                 <div class="flex items-start gap-3">
@@ -595,7 +542,8 @@
                     </h4>
                     <p class="text-gray-600">
                       Tailored software designed specifically for your business
-                      needs and workflows.
+                      needs and workflows, using the right technologies for your
+                      use case.
                     </p>
                   </div>
                 </div>
@@ -608,7 +556,8 @@
                     <h4 class="font-semibold text-gray-900">API Development</h4>
                     <p class="text-gray-600">
                       Robust APIs that integrate with your existing systems and
-                      third-party services.
+                      third-party services, built with the most appropriate
+                      backend technologies.
                     </p>
                   </div>
                 </div>
@@ -623,7 +572,8 @@
                     </h4>
                     <p class="text-gray-600">
                       Built to grow with your business, handling increased load
-                      and new features.
+                      and new features, regardless of the technology stack
+                      chosen.
                     </p>
                   </div>
                 </div>
