@@ -5,9 +5,17 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui"],
   css: ["~/assets/css/main.css"],
 
+  // GitHub Pages configuration
+  nitro: {
+    prerender: {
+      routes: ["/"],
+    },
+  },
+
   // App configuration
   app: {
-    baseURL: "/",
+    baseURL:
+      process.env.NODE_ENV === "production" ? "/integrablue-website/" : "/",
     buildAssetsDir: "/_nuxt/",
     head: {
       title: "IntegraBlue Web Agency",
@@ -26,7 +34,10 @@ export default defineNuxtConfig({
         },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://integrablue.co.uk/" },
-        { property: "og:image", content: "/favicon.ico" },
+        {
+          property: "og:image",
+          content: "https://integrablue.co.uk/favicon.ico",
+        },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "IntegraBlue Web Agency" },
         {
@@ -34,7 +45,10 @@ export default defineNuxtConfig({
           content:
             "Modern web agency for small businesses and startups. Specializing in Nuxt 3, Vue.js, and minimalist design.",
         },
-        { name: "twitter:image", content: "/favicon.ico" },
+        {
+          name: "twitter:image",
+          content: "https://integrablue.co.uk/favicon.ico",
+        },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
@@ -45,6 +59,13 @@ export default defineNuxtConfig({
     public: {
       formEndpoint:
         process.env.FORM_ENDPOINT || "https://formspree.io/f/mnnzvarw",
+    },
+  },
+
+  // PostCSS configuration for Tailwind CSS v4
+  postcss: {
+    plugins: {
+      "@tailwindcss/postcss": {},
     },
   },
 });
