@@ -14,8 +14,7 @@ export default defineNuxtConfig({
 
   // App configuration
   app: {
-    baseURL:
-      process.env.NODE_ENV === "production" ? "/integrablue-website/" : "/",
+    baseURL: "/",
     buildAssetsDir: "/_nuxt/",
     head: {
       title: "IntegraBlue Web Agency",
