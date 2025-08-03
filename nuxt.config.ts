@@ -3,7 +3,13 @@ export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
   modules: ["@nuxt/ui"],
+
   css: ["~/assets/css/main.css"],
+
+  // Build configuration to ensure icons are properly included
+  build: {
+    transpile: ["@nuxt/ui"],
+  },
 
   // GitHub Pages configuration
   nitro: {
