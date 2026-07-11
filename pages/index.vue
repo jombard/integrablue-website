@@ -1,143 +1,141 @@
 <template>
-  <div class="min-h-screen bg-white">
-    <!-- Hero Section -->
-    <HeroSection
-      title-white="Modern Web Solutions for"
-      title-blue="Growing Businesses"
-      description="We build fast, beautiful, and scalable websites that help small businesses and startups succeed online."
-    >
-      <UButton
-        size="lg"
-        color="primary"
-        variant="solid"
-        class="font-semibold"
-        @click="navigateTo('/contact')"
-      >
-        Get Started
-      </UButton>
-      <UButton
-        size="lg"
-        variant="outline"
-        class="border-white text-white hover:bg-white hover:text-blue-900"
-        @click="navigateTo('/portfolio')"
-      >
-        View Our Work
-      </UButton>
-    </HeroSection>
-
-    <!-- Services Overview Section -->
-    <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4 max-w-7xl">
-        <SectionHeader
-          title="Our Services"
-          description="From concept to launch, we handle every aspect of your web presence"
-        />
-
-        <div class="grid md:grid-cols-3 gap-8">
-          <ServiceCard
-            title="Web Design"
-            description="Beautiful, user-friendly designs that convert visitors into customers"
-            icon="i-heroicons-paint-brush"
-            link="/services#web-design"
-          />
-          <ServiceCard
-            title="Web Development"
-            description="Fast, responsive websites built with modern technologies"
-            icon="i-heroicons-code-bracket"
-            link="/services#web-development"
-          />
-          <ServiceCard
-            title="Software Development"
-            description="Custom software solutions to streamline your business operations"
-            icon="i-heroicons-cpu-chip"
-            link="/services#software-solutions"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Value Proposition Section -->
-    <section class="py-20 bg-white max-w-7xl mx-auto">
-      <div class="ui-container mx-auto px-4">
-        <SectionHeader
-          title="Why Choose IntegraBlue Web Agency?"
-          description="What sets us apart from other web agencies"
-        />
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <div class="bg-canvas text-fg">
+    <!-- Hero — the Spearhead, the person, the first screen -->
+    <section class="px-5 py-16 md:px-8 md:py-24 lg:py-32">
+      <div class="mx-auto max-w-site">
+        <div
+          class="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16"
+        >
           <div>
-            <div class="space-y-6">
-              <CheckItem
-                title="Modern Technology Stack"
-                description="Built with Nuxt 3, Vue.js, and the latest web technologies for optimal performance"
-              />
-              <CheckItem
-                title="Small Business Focus"
-                description="We understand the unique challenges and opportunities that small businesses face"
-              />
-              <CheckItem
-                title="Ongoing Support"
-                description="We don't just build your website - we're here to help it grow and evolve"
-              />
+            <p
+              class="font-mono text-sm uppercase tracking-[0.14em] text-sky"
+            >
+              C#/.NET · TypeScript · Azure
+            </p>
+
+            <h1
+              class="mt-5 text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-fg sm:text-5xl lg:text-[3.5rem]"
+            >
+              I'm the senior engineer teams trust with the whole stack.
+            </h1>
+
+            <!-- The Spearhead, verbatim (CONTEXT.md) -->
+            <p class="mt-6 max-w-2xl text-lg text-fg-muted sm:text-xl">
+              Senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure
+              — owning delivery from database to cloud to CI/CD.
+            </p>
+
+            <p class="mt-5 max-w-2xl text-base leading-relaxed text-fg-muted">
+              I take ownership from the schema to the pipeline, tell you straight
+              what a job actually needs, and pick up whatever technology the
+              problem calls for. You deal with a named person the whole way — the
+              senior you meet is the one who builds.
+            </p>
+
+            <div class="mt-9">
+              <NuxtLink
+                to="/small-builds"
+                class="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
+              >
+                See how small builds work
+              </NuxtLink>
             </div>
           </div>
 
-          <div
-            class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg"
-          >
-            <div class="text-center">
-              <UIcon
-                name="i-heroicons-rocket-launch"
-                class="w-16 h-16 text-blue-600 mx-auto mb-4"
-              />
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Ready to Get Started?
-              </h3>
-              <p class="text-gray-600 mb-6">
-                Let's discuss how we can help your business succeed online
-              </p>
-              <UButton
-                color="primary"
-                size="lg"
-                @click="navigateTo('/contact')"
-              >
-                Schedule a Consultation
-              </UButton>
-            </div>
-          </div>
+          <!-- Owner's photo — its job is verification, so it carries the name.
+               `mug.jpg` is the interim shot; the cap-off replacement is on the
+               launch-gate checklist (DESIGN_SYSTEM.md). -->
+          <figure class="lg:justify-self-end">
+            <img
+              :src="mugUrl"
+              alt="Jon Lombard"
+              width="640"
+              height="640"
+              class="w-full max-w-sm rounded-2xl border border-hairline object-cover shadow-2xl"
+            />
+            <figcaption class="mt-3 font-mono text-sm text-fg-muted">
+              <span class="text-fg">Jon Lombard</span> · IntegraBlue
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- Call-to-Action Section -->
-    <CallToActionSection
-      title="Ready to Transform Your Online Presence?"
-      description="Join the growing number of businesses that trust IntegraBlue to build their digital future"
-    />
+    <!-- Proof — structural container, empty until ticket 7 supplies real,
+         NDA-safe case notes. Nothing is invented here. -->
+    <section
+      id="proof"
+      class="border-t border-hairline px-5 py-16 md:px-8 md:py-24 lg:py-32"
+    >
+      <div class="mx-auto max-w-site">
+        <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
+          Proof
+        </p>
+        <h2
+          class="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl"
+        >
+          Evidence, not adjectives.
+        </h2>
+        <p class="mt-5 max-w-2xl text-lg text-fg-muted">
+          I'd rather show the work than describe it. Anonymised, NDA-safe notes
+          from real, delivered engagements live here — each one something you can
+          check.
+        </p>
 
-    <!-- Client Testimonials Section -->
-    <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4 max-w-7xl">
-        <SectionHeader
-          title="What Our Clients Say"
-          description="Don't just take our word for it - hear from the businesses we've helped"
-        />
+        <ul class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <li
+            v-for="note in caseNotes"
+            :key="note.slug"
+            data-proof-item
+            class="rounded-2xl bg-surface p-6 text-ink shadow-xl"
+          >
+            <p
+              class="font-mono text-xs uppercase tracking-[0.12em] text-ink-muted"
+            >
+              {{ note.client }}
+            </p>
+            <p class="mt-3">{{ note.summary }}</p>
+            <p class="mt-4">
+              <NuxtLink
+                :to="note.href"
+                class="font-medium text-link-ink underline underline-offset-4"
+              >
+                Read the note →
+              </NuxtLink>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ClientTestimonial
-            client-name="S. Johnson"
-            title="CEO, Technology Startup"
-            testimonial="IntegraBlue transformed our online presence completely. Our new website is fast, beautiful, and has already increased our leads by 40%."
-          />
-          <ClientTestimonial
-            client-name="M. Chen"
-            title="Founder, Business Consulting Firm"
-            testimonial="The team at IntegraBlue is professional, responsive, and truly understands what small businesses need. Highly recommended!"
-          />
-          <ClientTestimonial
-            client-name="E. Rodriguez"
-            title="Marketing Director, Creative Agency"
-            testimonial="From the initial consultation to the final launch, every step was smooth and professional. Our new website exceeded expectations."
-          />
+    <!-- Pointer to the only inbound funnel: Small Builds -->
+    <section class="px-5 pb-16 md:px-8 md:pb-24 lg:pb-32">
+      <div class="mx-auto max-w-site">
+        <div class="rounded-2xl bg-surface p-8 shadow-xl md:p-12">
+          <p
+            class="font-mono text-sm uppercase tracking-[0.14em] text-ink-muted"
+          >
+            Small builds
+          </p>
+          <h2
+            class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
+          >
+            Got a small, well-defined build?
+          </h2>
+          <p class="mt-4 max-w-2xl text-lg text-ink-muted">
+            A website, an integration, an automation — roughly ten days of work,
+            delivered over a few weeks alongside my embedded engagement. I scope
+            it on a short call, quote a fixed price before anything starts, then
+            build it.
+          </p>
+          <p class="mt-6">
+            <NuxtLink
+              to="/small-builds"
+              class="font-medium text-link-ink underline underline-offset-4"
+            >
+              See how a small build works →
+            </NuxtLink>
+          </p>
         </div>
       </div>
     </section>
@@ -145,14 +143,52 @@
 </template>
 
 <script setup lang="ts">
-// Use Nuxt 3 Composition API
+import mugUrl from "~/assets/images/mug.jpg";
+
+/**
+ * Proof case notes. Empty until ticket 7 supplies real, anonymised, NDA-safe
+ * material (the launch gate). The shape is fixed now so notes — and later
+ * endorsements — slot in as content without restructuring the section.
+ */
+interface CaseNote {
+  /** Stable key / URL slug for the full note. */
+  slug: string;
+  /** Anonymised label, e.g. "Mid-size fintech". Never a real client name. */
+  client: string;
+  /** One-line summary shown on Home; the full note lives at `href`. */
+  summary: string;
+  /** Route to the full case note. */
+  href: string;
+}
+
+const caseNotes: CaseNote[] = [];
+
 useHead({
-  title: "IntegraBlue Web Agency - Modern Web Solutions for Small Businesses",
+  title:
+    "Jon Lombard — Senior full-stack engineer (C#/.NET, Azure) | IntegraBlue",
   meta: [
     {
       name: "description",
       content:
-        "IntegraBlue Web Agency specializes in modern web design and development for small businesses and startups. Built with Nuxt 3 and Vue.js.",
+        "Jon Lombard, senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure — owning delivery from database to cloud to CI/CD. UK, remote-first.",
+    },
+    {
+      property: "og:title",
+      content: "Jon Lombard — Senior full-stack engineer | IntegraBlue",
+    },
+    {
+      property: "og:description",
+      content:
+        "Senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure — owning delivery from database to cloud to CI/CD.",
+    },
+    {
+      name: "twitter:title",
+      content: "Jon Lombard — Senior full-stack engineer | IntegraBlue",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "Senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure — owning delivery from database to cloud to CI/CD.",
     },
   ],
 });

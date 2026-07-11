@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   // GitHub Pages configuration
   nitro: {
     prerender: {
-      routes: ["/"],
+      routes: ["/", "/small-builds"],
     },
   },
 

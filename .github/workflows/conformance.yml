@@ -1,0 +1,33 @@
+# Runs the conformance suite on every push and pull request.
+# This workflow never deploys — deployment lives in `nuxt.yml` (master only).
+# It builds the static site and asserts over the pre-rendered HTML, so a change
+# that breaks the build or violates CONTEXT.md fails CI before it can ship.
+name: Conformance
+
+on:
+  push:
+  pull_request:
+
+# A newer push to the same ref supersedes an in-flight check run.
+concurrency:
+  group: conformance-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      # `npm test` builds the static site (nuxt generate) and asserts over the
+      # generated HTML. No artifact upload, no Pages deployment.
+      - run: npm test
