@@ -1,221 +1,206 @@
 <template>
-  <div class="min-h-screen bg-white">
-    <!-- Hero Section -->
-    <HeroSection
-      title-white="About"
-      title-blue="IntegraBlue Web Agency"
-      description="We're passionate about helping small businesses and startups succeed in the digital world"
-    />
+  <div class="bg-canvas text-fg">
+    <!-- Hero — who the person is, anchored on the Spearhead -->
+    <section class="px-5 py-16 md:px-8 md:py-24 lg:py-32">
+      <div class="mx-auto max-w-site">
+        <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
+          About
+        </p>
 
-    <!-- Company Story and Mission -->
-    <section class="py-20 bg-white max-w-7xl mx-auto">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          title="Our Story"
-          description="The journey that led us to where we are today"
-        />
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <p class="text-lg text-gray-600 mb-6">
-              Founded in 2024, IntegraBlue Web Agency was born from a simple
-              belief: every business, regardless of size, deserves access to
-              world-class web solutions.
-            </p>
-            <p class="text-lg text-gray-600 mb-6">
-              We started as a small team of developers and designers who were
-              frustrated by the lack of affordable, high-quality web services
-              for small businesses. Too often, we saw promising companies
-              struggle with outdated websites or expensive solutions that didn't
-              fit their needs.
-            </p>
-            <p class="text-lg text-gray-600">
-              Today, we're proud to serve growing businesses across the UK,
-              helping them establish strong online presences that drive real
-              results.
-            </p>
-          </div>
-
-          <div
-            class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg"
-          >
-            <div class="text-center">
-              <UIcon
-                name="i-heroicons-light-bulb"
-                class="w-16 h-16 text-blue-600 mx-auto mb-4"
-              />
-              <h3 class="text-xl font-semibold text-gray-900 mb-2">
-                Our Mission
-              </h3>
-              <p class="text-gray-600">
-                To democratize access to professional web development by
-                providing small businesses and startups with modern, scalable,
-                and affordable web solutions that drive growth and success.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Company Values -->
-    <section class="py-20 bg-gray-50">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <SectionHeader
-          title="Our Values"
-          description="The principles that guide everything we do"
-        />
-
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ValueCard
-            title="Passion for Quality"
-            description="We believe that every project, no matter the size, deserves our full attention and commitment to excellence."
-            icon="i-heroicons-heart"
-          />
-          <ValueCard
-            title="Client Partnership"
-            description="We work closely with our clients, treating their success as our success and building long-term relationships."
-            icon="i-heroicons-users"
-          />
-          <ValueCard
-            title="Innovation"
-            description="We stay at the forefront of web technologies to deliver cutting-edge solutions that give our clients a competitive edge."
-            icon="i-heroicons-sparkles"
-          />
-          <ValueCard
-            title="Transparency"
-            description="We believe in clear communication, honest pricing, and keeping our clients informed every step of the way."
-            icon="i-heroicons-shield-check"
-          />
-          <ValueCard
-            title="Reliability"
-            description="We deliver on our promises, meet deadlines, and provide ongoing support to ensure our clients' success."
-            icon="i-heroicons-clock"
-          />
-          <ValueCard
-            title="Continuous Learning"
-            description="We're constantly learning and improving our skills to provide the best possible solutions for our clients."
-            icon="i-heroicons-academic-cap"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Section (Placeholder) -->
-    <!-- <section class="py-20 bg-white max-w-7xl mx-auto">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeader
-          title="Why Choose IntegraBlue Web Agency?"
-          description="What sets us apart from other web agencies"
-        />
-
-        <div
-          class="bg-gradient-to-br from-blue-50 to-blue-100 p-12 rounded-lg text-center"
+        <h1
+          class="mt-5 max-w-3xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-fg sm:text-5xl"
         >
-          <UIcon
-            name="i-heroicons-user-group"
-            class="w-20 h-20 text-blue-600 mx-auto mb-6"
-          />
-          <h3 class="text-2xl font-semibold text-gray-900 mb-4">
-            Growing Our Team
-          </h3>
-          <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            We're currently expanding our team of talented developers,
-            designers, and digital strategists. If you're passionate about
-            helping small businesses succeed and want to work with cutting-edge
-            technologies, we'd love to hear from you.
-          </p>
-          <UButton color="primary" size="lg"> Join Our Team </UButton>
-        </div>
+          I'm Jon Lombard, the engineer behind IntegraBlue.
+        </h1>
+
+        <!-- The Spearhead, anchoring everything below it -->
+        <p class="mt-6 max-w-2xl text-lg text-fg-muted sm:text-xl">
+          Senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure —
+          owning delivery from database to cloud to CI/CD.
+        </p>
+
+        <p class="mt-5 max-w-2xl text-base leading-relaxed text-fg-muted">
+          IntegraBlue is how I take that on: a one-person practice where the
+          person you vet is the person who does the work. No layers, no handoffs
+          — just a senior engineer you can talk to directly.
+        </p>
       </div>
-    </section> -->
+    </section>
 
-    <!-- Why Choose IntegraBlue -->
-    <section class="py-20 bg-white">
-      <div class="ui-container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <SectionHeader
-          title="Why Choose IntegraBlue Web Agency?"
-          description="What sets us apart from other web agencies"
-        />
-
-        <div class="grid lg:grid-cols-2 gap-12">
-          <div class="space-y-8">
-            <CheckItem
-              title="Small Business Specialists"
-              description="We understand the unique challenges and opportunities that small businesses face in the digital landscape."
-            />
-            <CheckItem
-              title="Modern Technology Stack"
-              description="We use the latest technologies like Nuxt 3, Vue.js, and modern CSS frameworks to build fast, scalable websites."
-            />
-            <CheckItem
-              title="Transparent Pricing"
-              description="No hidden fees or surprises. We provide clear, upfront pricing for all our services."
-            />
-            <CheckItem
-              title="Ongoing Support"
-              description="We don't just build your website and walk away. We're here to help you grow and succeed."
-            />
-          </div>
-
-          <div class="bg-white p-8 rounded-lg shadow-lg">
-            <h3 class="text-xl font-semibold text-gray-900 mb-6">
-              Our Approach
-            </h3>
-            <div class="space-y-4">
-              <div class="flex items-center gap-3">
-                <div
-                  class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold"
-                >
-                  1
-                </div>
-                <span class="text-gray-700">Discovery & Planning</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div
-                  class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold"
-                >
-                  2
-                </div>
-                <span class="text-gray-700">Design & Development</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div
-                  class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold"
-                >
-                  3
-                </div>
-                <span class="text-gray-700">Testing & Launch</span>
-              </div>
-              <div class="flex items-center gap-3">
-                <div
-                  class="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold"
-                >
-                  4
-                </div>
-                <span class="text-gray-700">Support & Growth</span>
-              </div>
-            </div>
+    <!-- The real story — long-form prose on a light reading surface -->
+    <section class="px-5 pb-4 md:px-8">
+      <div class="mx-auto max-w-site">
+        <div class="rounded-2xl bg-surface p-8 text-ink shadow-xl md:p-12">
+          <div class="max-w-2xl">
+            <p
+              class="font-mono text-sm uppercase tracking-[0.12em] text-ink-muted"
+            >
+              The story
+            </p>
+            <h2
+              class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
+            >
+              A senior engineer, embedded in the work.
+            </h2>
+            <p class="mt-5 text-lg leading-relaxed text-ink-muted">
+              I've spent my career inside delivery teams, not beside them. Right
+              now I'm embedded full-time with a mid-size corporate client,
+              owning features from the database schema all the way out to the
+              cloud and the CI/CD pipeline that ships them. That's the ground the
+              rest of this stands on: real delivery, in production, day after
+              day.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-ink-muted">
+              That's the Spearhead, and everything else sits under it as
+              supporting evidence. I'm not selling one framework or a fixed
+              toolbox. I learn whatever the problem needs, because on real
+              delivery the stack serves the problem, not the other way round —
+              and picking up a new technology is a feature of how I work, not a
+              risk you take on.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Call to Action -->
-    <CallToActionSection
-      title="Ready to Work Together?"
-      description="Let's discuss how IntegraBlue can help your business succeed online"
-    />
+    <!-- How I work — the four behaviours narrated as prose, never a grid -->
+    <section class="px-5 py-16 md:px-8 md:py-24">
+      <div class="mx-auto max-w-site">
+        <div class="rounded-2xl bg-surface p-8 text-ink shadow-xl md:p-12">
+          <div class="max-w-2xl">
+            <p
+              class="font-mono text-sm uppercase tracking-[0.12em] text-ink-muted"
+            >
+              How I work
+            </p>
+            <h2
+              class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
+            >
+              Four habits, not a poster on the wall.
+            </h2>
+
+            <p class="mt-6 text-lg leading-relaxed text-ink-muted">
+              <span class="font-semibold text-ink">I own it end-to-end.</span>
+              Schema, API, frontend, deployment pipeline, the 2 a.m. production
+              incident — if it's part of the delivery, it's mine. "That's not my
+              job" isn't a phrase I use.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-ink-muted">
+              <span class="font-semibold text-ink">I give straight answers.</span>
+              Honest scoping and honest capacity, even when the honest answer
+              costs me the work. I'll cap a small build at around ten effort-days
+              and offer a phase-one slice rather than overpromise on time my
+              embedded engagement already spends.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-ink-muted">
+              <span class="font-semibold text-ink"
+                >I learn what the problem needs.</span
+              >
+              The interesting problems rarely respect the edge of a single
+              stack. I'd rather pick up the right tool and own the outcome than
+              force a familiar one and hand you a compromise.
+            </p>
+            <p class="mt-4 text-lg leading-relaxed text-ink-muted">
+              <span class="font-semibold text-ink"
+                >It stays personal, not corporate.</span
+              >
+              You deal with one named person from the first email to handover.
+              The senior you meet is the one who builds — no account manager in
+              the middle, no junior quietly doing the real work once the contract
+              is signed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Working model — short, factual statements on the dark frame -->
+    <section class="border-t border-hairline px-5 py-16 md:px-8 md:py-24">
+      <div class="mx-auto max-w-site">
+        <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
+          Working together
+        </p>
+        <h2 class="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl">
+          The practical part.
+        </h2>
+
+        <dl class="mt-10 grid gap-10 md:grid-cols-2">
+          <div>
+            <dt class="font-mono text-sm uppercase tracking-[0.12em] text-sky">
+              Where I work
+            </dt>
+            <dd class="mt-3 max-w-xl text-lg leading-relaxed text-fg-muted">
+              I'm UK-based and remote-first: working remotely with teams anywhere
+              in the UK; on-site by arrangement.
+            </dd>
+          </div>
+          <div>
+            <dt class="font-mono text-sm uppercase tracking-[0.12em] text-sky">
+              AI tooling
+            </dt>
+            <dd class="mt-3 max-w-xl text-lg leading-relaxed text-fg-muted">
+              I use modern AI tooling in my own work; on client engagements I follow your AI policy — client code never goes anywhere you haven't approved.
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- One rationed azure CTA -->
+    <section class="px-5 pb-16 md:px-8 md:pb-24 lg:pb-32">
+      <div class="mx-auto max-w-site">
+        <div class="rounded-2xl bg-surface p-8 text-ink shadow-xl md:p-12">
+          <div class="max-w-2xl">
+            <h2
+              class="text-2xl font-bold tracking-tight text-ink sm:text-3xl"
+            >
+              Sound like the engineer you need?
+            </h2>
+            <p class="mt-4 text-lg leading-relaxed text-ink-muted">
+              If you're vetting me for a contract or you've a small, well-defined
+              build in mind, the fastest thing is to tell me about it.
+            </p>
+            <div class="mt-8">
+              <NuxtLink
+                to="/contact"
+                class="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+              >
+                Get in touch
+              </NuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
 useHead({
-  title: "About Us - IntegraBlue Web Agency",
+  title: "About Jon Lombard — Senior full-stack engineer | IntegraBlue",
   meta: [
     {
       name: "description",
       content:
-        "Learn about IntegraBlue Web Agency - our story, mission, values, and why we're the perfect partner for small businesses and startups.",
+        "The senior engineer behind IntegraBlue: embedded full-time in corporate delivery, owning the whole stack from database to cloud to CI/CD. UK, remote-first.",
+    },
+    {
+      property: "og:title",
+      content: "About Jon Lombard — Senior full-stack engineer | IntegraBlue",
+    },
+    {
+      property: "og:description",
+      content:
+        "A one-person practice: the senior engineer you vet is the one who owns delivery from database to cloud to CI/CD. UK, remote-first.",
+    },
+    {
+      name: "twitter:title",
+      content: "About Jon Lombard — Senior full-stack engineer | IntegraBlue",
+    },
+    {
+      name: "twitter:description",
+      content:
+        "The senior engineer behind IntegraBlue — embedded in corporate delivery, owning the whole stack. UK, remote-first.",
     },
   ],
 });
