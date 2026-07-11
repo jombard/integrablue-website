@@ -84,15 +84,31 @@ export async function loadRoute(route: string): Promise<RenderedPage> {
 
   // Visible text comes from a throwaway parse so `root` keeps its scripts and
   // styles available for element/attribute assertions (e.g. meta, JSON-LD).
-  const forText = parse(html);
-  forText
-    .querySelectorAll("script, style, noscript, template")
-    .forEach((el) => el.remove());
-  const text = forText.structuredText.replace(/\s+/g, " ").trim();
+  const text = collapseVisibleText(parse(html));
 
   const page: RenderedPage = { route, path, html, root, text };
   cache.set(route, page);
   return page;
+}
+
+/**
+ * Return the page's first `<${tag}>`, or throw an error naming the route. The
+ * query-or-throw shared by the `<main>`/nav/footer accessors, so a missing
+ * element fails loudly (never a vacuous pass) with one consistent message.
+ */
+function requireElement(
+  page: RenderedPage,
+  tag: string,
+  note: string,
+): HTMLElement {
+  const el = page.root.querySelector(tag);
+  if (!el) {
+    throw new Error(
+      `No <${tag}> element in the rendered page for route "${page.route}" ` +
+        `(${page.path}). ${note}`,
+    );
+  }
+  return el;
 }
 
 /**
@@ -106,26 +122,76 @@ export async function loadRoute(route: string): Promise<RenderedPage> {
  * element/attribute queries; use `mainText` for copy/avoid-list assertions.
  */
 export function mainOf(page: RenderedPage): HTMLElement {
-  const main = page.root.querySelector("main");
-  if (!main) {
-    throw new Error(
-      `No <main> element in the rendered page for route "${page.route}" ` +
-        `(${page.path}). The default layout wraps every page's content in <main>.`,
-    );
-  }
-  return main;
+  return requireElement(
+    page,
+    "main",
+    "The default layout wraps every page's content in <main>.",
+  );
 }
 
 /**
- * Whitespace-normalised visible text of a page's `<main>` — the same contract
- * as `RenderedPage.text`, narrowed to the page's own content (chrome excluded).
- * Parses a throwaway copy so the cached `root` keeps its scripts intact for
- * other assertions.
+ * Strip the non-visible nodes from an already-parsed subtree and return its
+ * whitespace-normalised visible text — the shared core of `RenderedPage.text`
+ * and every `*Text` accessor, so "what a visitor reads" is defined once.
  */
-export function mainText(page: RenderedPage): string {
-  const scoped = parse(mainOf(page).outerHTML);
-  scoped
+function collapseVisibleText(node: HTMLElement): string {
+  node
     .querySelectorAll("script, style, noscript, template")
     .forEach((el) => el.remove());
-  return scoped.structuredText.replace(/\s+/g, " ").trim();
+  return node.structuredText.replace(/\s+/g, " ").trim();
+}
+
+/**
+ * Whitespace-normalised visible text of a single element — the same contract as
+ * `RenderedPage.text`, narrowed to one subtree. Parses a throwaway copy so the
+ * cached `root` keeps its scripts intact for other assertions.
+ */
+function visibleTextOf(el: HTMLElement): string {
+  return collapseVisibleText(parse(el.outerHTML));
+}
+
+/**
+ * Whitespace-normalised visible text of a page's `<main>` — the page's own
+ * content, with the shared chrome (nav, footer) excluded.
+ */
+export function mainText(page: RenderedPage): string {
+  return visibleTextOf(mainOf(page));
+}
+
+/**
+ * The shared navigation `<nav>` of a rendered page — the chrome tickets 2–5
+ * deliberately left outside their `<main>`-scoped assertions. Ticket 6 asserts
+ * through this: the four nav destinations, and no "agency" brand leak. Returns
+ * the live element for read-only element/attribute queries; use `navText` for
+ * copy assertions.
+ */
+export function navOf(page: RenderedPage): HTMLElement {
+  return requireElement(
+    page,
+    "nav",
+    "The default layout wraps every page in the shared nav.",
+  );
+}
+
+/** Whitespace-normalised visible text of the shared `<nav>`. */
+export function navText(page: RenderedPage): string {
+  return visibleTextOf(navOf(page));
+}
+
+/**
+ * The shared `<footer>` of a rendered page — the only region where the
+ * registered legal name "IntegraBlue Web Agency Limited" may appear (ticket 6).
+ * Returns the live element for read-only queries; use `footerText` for copy.
+ */
+export function footerOf(page: RenderedPage): HTMLElement {
+  return requireElement(
+    page,
+    "footer",
+    "The default layout wraps every page in the shared footer.",
+  );
+}
+
+/** Whitespace-normalised visible text of the shared `<footer>`. */
+export function footerText(page: RenderedPage): string {
+  return visibleTextOf(footerOf(page));
 }
