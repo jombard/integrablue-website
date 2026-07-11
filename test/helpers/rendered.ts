@@ -93,3 +93,38 @@ export async function loadRoute(route: string): Promise<RenderedPage> {
   cache.set(route, page);
   return page;
 }
+
+/**
+ * The `<main>` element of a rendered page — the page's own content, with the
+ * shared chrome (nav, footer) excluded.
+ *
+ * Page-scoped conformance (tickets 2–5) asserts through this: a home-only rule
+ * like "no 'agency' language here" must not trip over the footer's registered
+ * legal name or a not-yet-rebuilt nav, both of which live outside `<main>` and
+ * belong to tickets 6/8. Returns the live element for read-only
+ * element/attribute queries; use `mainText` for copy/avoid-list assertions.
+ */
+export function mainOf(page: RenderedPage): HTMLElement {
+  const main = page.root.querySelector("main");
+  if (!main) {
+    throw new Error(
+      `No <main> element in the rendered page for route "${page.route}" ` +
+        `(${page.path}). The default layout wraps every page's content in <main>.`,
+    );
+  }
+  return main;
+}
+
+/**
+ * Whitespace-normalised visible text of a page's `<main>` — the same contract
+ * as `RenderedPage.text`, narrowed to the page's own content (chrome excluded).
+ * Parses a throwaway copy so the cached `root` keeps its scripts intact for
+ * other assertions.
+ */
+export function mainText(page: RenderedPage): string {
+  const scoped = parse(mainOf(page).outerHTML);
+  scoped
+    .querySelectorAll("script, style, noscript, template")
+    .forEach((el) => el.remove());
+  return scoped.structuredText.replace(/\s+/g, " ").trim();
+}

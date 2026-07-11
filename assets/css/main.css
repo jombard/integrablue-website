@@ -2,6 +2,43 @@
 @import "@nuxt/ui";
 
 @theme {
+  /* =====================================================================
+   * Contractor brand — Midnight/Azure (DESIGN_SYSTEM.md, ADR-0001).
+   * Introduced with the home rebuild (ticket 2); every text pairing is
+   * WCAG-AA audited in DESIGN_SYSTEM.md. Additive during the page-by-page
+   * revamp: the legacy brand / neutral / error tokens below still back the
+   * not-yet-rebuilt pages and are removed in ticket 8's fiction purge.
+   * ===================================================================== */
+
+  /* ---- dark frame (dominant) ---- */
+  --color-canvas: #0d2444; /* primary page background */
+  --color-elevated: #16345f; /* dark panels, secondary blue */
+  --color-hairline: #274a7a; /* borders/dividers on dark */
+  --color-fg: #f5f8ff; /* primary text on dark */
+  --color-fg-muted: #a7bad6; /* secondary text on dark */
+  --color-sky: #7fb2f7; /* inline links, eyebrows, labels on dark */
+
+  /* ---- accent — RATIONED to the one primary CTA per screen ---- */
+  --color-accent: #3b82f6; /* CTA button fill + focus ring ONLY */
+  --color-accent-hover: #5a97f8;
+  --color-accent-ink: #07152c; /* label on the azure button */
+
+  /* ---- light reading surfaces (long-form prose) ---- */
+  --color-surface: #f4f7fb; /* reading card / panel background */
+  --color-surface-sunk: #e7eef7; /* nested / subtle fill */
+  --color-ink: #0f1d33; /* primary text on light */
+  --color-ink-muted: #48586f; /* secondary text on light */
+  --color-hairline-lt: #d5deea; /* borders/dividers on light */
+  --color-link-ink: #1d4ed8; /* inline links on light */
+
+  /* ---- type + layout ---- */
+  --font-sans:
+    system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono:
+    ui-monospace, "Cascadia Code", Consolas, "SF Mono", Menlo, monospace;
+  --container-site: 72rem; /* 1152px */
+
+  /* ---- legacy agency palette (retired in ticket 8) ---- */
   /* Brand Blues */
   --color-brand-50: #eff6ff;
   --color-brand-100: #dbeafe;

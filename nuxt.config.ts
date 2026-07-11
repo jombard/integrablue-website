@@ -15,6 +15,10 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       routes: ["/"],
+      // Home links ahead to /small-builds, which ticket 3 introduces. Until
+      // then, skip it so the crawler doesn't fail the static build on a route
+      // that doesn't exist yet. Remove this once the Small Builds page ships.
+      ignore: ["/small-builds"],
     },
   },
 
