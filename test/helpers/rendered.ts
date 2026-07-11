@@ -20,6 +20,7 @@ export const routes = [
   "/contact",
   "/portfolio",
   "/services",
+  "/small-builds",
 ] as const;
 export type Route = (typeof routes)[number];
 
