@@ -64,3 +64,10 @@
   --color-error-light: #ef4444;
   --color-error-surface: #fef2f2;
 }
+
+/* The site is dark-framed: paint the document background canvas so overscroll
+ * (mobile rubber-banding) and any uncovered area match the frame instead of
+ * flashing browser-default white. */
+body {
+  background-color: var(--color-canvas);
+}
