@@ -24,11 +24,14 @@
   --color-accent-ink: #07152c; /* label on the azure button */
 
   /* ---- light reading surfaces (long-form prose) ---- */
-  --color-surface: #f4f7fb; /* reading card / panel background */
-  --color-surface-sunk: #e7eef7; /* nested / subtle fill */
+  /* Light blue, not off-white, using the existing brand-100/200 steps so
+     panels sit in the navy/azure template. ink / ink-muted / link-ink on
+     these fills remain WCAG-AA. */
+  --color-surface: #dbeafe; /* reading card / panel background (was #f4f7fb) */
+  --color-surface-sunk: #bfdbfe; /* nested / form fill (was #e7eef7) */
   --color-ink: #0f1d33; /* primary text on light */
   --color-ink-muted: #48586f; /* secondary text on light */
-  --color-hairline-lt: #d5deea; /* borders/dividers on light */
+  --color-hairline-lt: #93c5fd; /* borders/dividers on light (was #d5deea) */
   --color-link-ink: #1d4ed8; /* inline links on light */
 
   /* ---- type + layout ---- */

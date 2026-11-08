@@ -266,9 +266,9 @@ useHead({
  */
 const formEndpoint = useRuntimeConfig().public.formEndpoint as string;
 
-/** Shared field styling: white field on the light card. */
+/** Shared field styling: light-blue fill on the light-blue card. */
 const fieldClass =
-  "mt-2 w-full rounded-lg border border-hairline-lt bg-white px-4 py-3 text-ink placeholder:text-ink-muted/60 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface";
+  "mt-2 w-full rounded-lg border border-hairline-lt bg-surface-sunk px-4 py-3 text-ink placeholder:text-ink-muted/60 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface";
 
 // The inputs are uncontrolled: `onSubmit` reads current values straight off the
 // form via FormData, and the native `name` attributes carry both the JS and the
