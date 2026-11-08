@@ -41,7 +41,7 @@ export default defineNuxtConfig({
         { property: "og:url", content: "https://integrablue.co.uk/" },
         {
           property: "og:image",
-          content: "https://integrablue.co.uk/favicon.ico",
+          content: "https://integrablue.co.uk/apple-touch-icon.png",
         },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: "IntegraBlue | one-person software consultancy" },
@@ -52,10 +52,30 @@ export default defineNuxtConfig({
         },
         {
           name: "twitter:image",
-          content: "https://integrablue.co.uk/favicon.ico",
+          content: "https://integrablue.co.uk/apple-touch-icon.png",
         },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [
+        { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16.png",
+        },
+        { rel: "shortcut icon", href: "/favicon.ico" },
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png",
+        },
+      ],
     },
   },
 
