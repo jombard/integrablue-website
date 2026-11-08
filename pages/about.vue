@@ -21,8 +21,7 @@
 
         <p class="mt-5 max-w-2xl text-base leading-relaxed text-fg-muted">
           I've been writing software since 2007 and contracting remotely from
-          the UK since 2014. Those years are my experience, not a company
-          founding date. IntegraBlue is the company I use for the work.
+          the UK since 2014.
         </p>
       </div>
     </section>
@@ -146,11 +145,10 @@
               What I work with
             </dt>
             <dd class="mt-3 max-w-xl text-lg leading-relaxed text-fg-muted">
-              A selection from production work, not a ceiling and not equal
-              specialisms: C# and .NET, SQL Server, JavaScript and TypeScript,
-              Vue and Nuxt, Angular, React, Python, Azure, Terraform, Cypress
-              and unit testing, Azure DevOps. I'm used to picking up a system I
-              have not used in a while.
+              A selection from production work: C# and .NET, SQL Server,
+              JavaScript and TypeScript, Vue and Nuxt, Angular, React, Python,
+              Azure, Terraform, Cypress and unit testing, Azure DevOps. I'm used
+              to picking up a system I have not used in a while.
             </dd>
           </div>
           <div>

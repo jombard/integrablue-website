@@ -72,12 +72,8 @@
         <h2
           class="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl"
         >
-          A few examples from delivered engagements.
+          Examples from past work.
         </h2>
-        <p class="mt-5 max-w-2xl text-lg text-fg-muted">
-          Names, products and employers stay out of it. These are the shape of
-          the work, written so they can sit on a public page.
-        </p>
 
         <ul class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <li

@@ -39,7 +39,7 @@ describe("conformance — About page (ticket 4)", () => {
     expect(text).toMatch(/one-person/i);
     expect(text).toMatch(/2007/);
     expect(text).toMatch(/2014/);
-    expect(text).toMatch(/not a company founding date/i);
+    expect(text).not.toMatch(/founding date/i);
   });
 
   it("expresses the four values as behaviours in prose, not a grid", async () => {
