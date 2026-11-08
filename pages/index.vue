@@ -96,7 +96,7 @@
     <!-- Pointer to a conversation, with small builds as one defined option -->
     <section class="px-5 pb-16 md:px-8 md:pb-24 lg:pb-32">
       <div class="mx-auto max-w-site">
-        <div class="rounded-2xl bg-surface p-8 shadow-xl md:p-12">
+        <div class="rounded-2xl bg-surface p-8 text-ink shadow-xl md:p-12">
           <p
             class="font-mono text-sm uppercase tracking-[0.14em] text-ink-muted"
           >
