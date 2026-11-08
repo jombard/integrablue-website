@@ -10,13 +10,13 @@
         <h1
           class="mt-5 max-w-3xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-fg sm:text-5xl"
         >
-          Tell me what you're trying to build.
+          Tell me about the project.
         </h1>
 
         <p class="mt-6 max-w-2xl text-lg text-fg-muted sm:text-xl">
-          Whether you've a small, well-defined build in mind or you're vetting me
-          for a contract, describe the problem in your own words. It goes
-          straight to me — the same senior engineer who'd do the work.
+          Modernisation, ongoing product ownership, or a smaller well-defined
+          build: describe the problem in your own words. It goes straight to me,
+          the same person who would do the work.
         </p>
       </div>
     </section>
@@ -32,19 +32,19 @@
               Message sent
             </p>
             <h2 class="mt-3 text-2xl font-bold tracking-tight text-ink">
-              Thanks — that's with me.
+              Thanks. That's with me.
             </h2>
             <p class="mt-4 text-lg leading-relaxed text-ink-muted">
               I read every enquiry myself and I'll reply personally, usually
-              within two working days. If it's a fixed-quote build, the first
-              step is a short, free scoping call.
+              within two working days. If the next step is a scoped piece of
+              work, the first step is a short, free scoping call.
             </p>
             <p class="mt-6">
               <NuxtLink
-                to="/small-builds"
+                to="/about"
                 class="font-medium text-link-ink underline underline-offset-4"
               >
-                In the meantime, here's what a small build looks like →
+                More about how IntegraBlue works →
               </NuxtLink>
             </p>
           </div>
@@ -115,14 +115,14 @@
                   for="message"
                   class="block font-mono text-sm text-ink-muted"
                 >
-                  What are you trying to build?
+                  Tell me about the project
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows="6"
                   required
-                  placeholder="The problem, roughly what you're picturing, and anything I should know."
+                  placeholder="The problem, roughly what you need, and anything I should know."
                   :class="[fieldClass, 'resize-y']"
                 ></textarea>
               </div>
@@ -201,15 +201,15 @@
               <p class="font-mono text-sm text-sky">01</p>
               <p class="mt-2 text-lg leading-relaxed text-fg-muted">
                 I reply personally, usually within two working days. No
-                auto-responder, no account manager — just me.
+                auto-responder, no account manager. Just me.
               </p>
             </li>
             <li>
               <p class="font-mono text-sm text-sky">02</p>
               <p class="mt-2 text-lg leading-relaxed text-fg-muted">
-                If it's a build, a short, free scoping call is step one of every
-                fixed quote — so you and I agree exactly what I'll deliver before
-                any work starts.
+                If the next step is a scoped piece of work, a short, free
+                scoping call is step one of every fixed quote, so you and I
+                agree exactly what I'll deliver before any work starts.
               </p>
             </li>
           </ol>
@@ -230,30 +230,30 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Contact — tell me about your build | IntegraBlue",
+  title: "Contact | discuss your project with IntegraBlue",
   meta: [
     {
       name: "description",
       content:
-        "Describe your problem in your own words and it comes straight to me. I reply personally, usually within two working days; every fixed quote starts with a short free scoping call.",
+        "Describe the project in your own words and it comes straight to me. I reply personally, usually within two working days. Every fixed quote starts with a short free scoping call.",
     },
     {
       property: "og:title",
-      content: "Contact — tell me about your build | IntegraBlue",
+      content: "Contact | discuss your project with IntegraBlue",
     },
     {
       property: "og:description",
       content:
-        "A first-person contact form for a small, well-defined build or a contract enquiry. Personal reply usually within two working days.",
+        "A first-person contact form for modernisation, ongoing product ownership, or a smaller well-defined build. Personal reply usually within two working days.",
     },
     {
       name: "twitter:title",
-      content: "Contact — tell me about your build | IntegraBlue",
+      content: "Contact | discuss your project with IntegraBlue",
     },
     {
       name: "twitter:description",
       content:
-        "Describe your problem in your own words. Personal reply usually within two working days; every fixed quote starts with a short free scoping call.",
+        "Describe the project in your own words. Personal reply usually within two working days. Every fixed quote starts with a short free scoping call.",
     },
   ],
 });
@@ -266,13 +266,13 @@ useHead({
  */
 const formEndpoint = useRuntimeConfig().public.formEndpoint as string;
 
-/** Shared field styling — white field on the light card, per DESIGN_SYSTEM.md. */
+/** Shared field styling: white field on the light card. */
 const fieldClass =
   "mt-2 w-full rounded-lg border border-hairline-lt bg-white px-4 py-3 text-ink placeholder:text-ink-muted/60 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-surface";
 
 // The inputs are uncontrolled: `onSubmit` reads current values straight off the
 // form via FormData, and the native `name` attributes carry both the JS and the
-// no-JS post — so no reactive mirror of the field values is needed.
+// no-JS post, so no reactive mirror of the field values is needed.
 type Status = "idle" | "submitting" | "success" | "error";
 const status = ref<Status>("idle");
 

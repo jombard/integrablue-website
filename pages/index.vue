@@ -1,6 +1,6 @@
 <template>
   <div class="bg-canvas text-fg">
-    <!-- Hero — the Spearhead, the person, the first screen -->
+    <!-- Hero — the person, the company, the first screen -->
     <section class="px-5 py-16 md:px-8 md:py-24 lg:py-32">
       <div class="mx-auto max-w-site">
         <div
@@ -10,41 +10,40 @@
             <p
               class="font-mono text-sm uppercase tracking-[0.14em] text-sky"
             >
-              C#/.NET · TypeScript · Azure
+              One-person consultancy · UK · remote-first
             </p>
 
             <h1
               class="mt-5 text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-fg sm:text-5xl lg:text-[3.5rem]"
             >
-              I'm the senior engineer teams trust with the whole stack.
+              I take on production software and keep it in good shape.
             </h1>
 
-            <!-- The Spearhead, verbatim (CONTEXT.md) -->
             <p class="mt-6 max-w-2xl text-lg text-fg-muted sm:text-xl">
-              Senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure
-              — owning delivery from database to cloud to CI/CD.
+              IntegraBlue is my one-person consultancy. I'm Jon Lombard, an
+              independent senior developer. Backend, APIs, frontend, databases,
+              infrastructure, tests and CI/CD, plus the conversations with the
+              people who need the work done.
             </p>
 
             <p class="mt-5 max-w-2xl text-base leading-relaxed text-fg-muted">
-              I take ownership from the schema to the pipeline, tell you straight
-              what a job actually needs, and pick up whatever technology the
-              problem calls for. You deal with a named person the whole way — the
-              senior you meet is the one who builds.
+              Most of the work is modernising a system that already exists,
+              making it maintainable, protecting data while it changes, and
+              reducing what it costs to run in the cloud. I stay with the
+              product. You deal with me the whole way.
             </p>
 
             <div class="mt-9">
               <NuxtLink
-                to="/small-builds"
+                to="/contact"
                 class="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
               >
-                See how small builds work
+                Discuss your project
               </NuxtLink>
             </div>
           </div>
 
-          <!-- Owner's photo — its job is verification, so it carries the name.
-               `mug.jpg` is the interim shot; the cap-off replacement is on the
-               launch-gate checklist (DESIGN_SYSTEM.md). -->
+          <!-- Owner's photo — its job is verification, so it carries the name. -->
           <figure class="lg:justify-self-end">
             <img
               :src="mugUrl"
@@ -61,25 +60,23 @@
       </div>
     </section>
 
-    <!-- Proof — structural container, empty until ticket 7 supplies real,
-         NDA-safe case notes. Nothing is invented here. -->
+    <!-- Proof — short anonymised examples, not a promise of a case-study library -->
     <section
       id="proof"
       class="border-t border-hairline px-5 py-16 md:px-8 md:py-24 lg:py-32"
     >
       <div class="mx-auto max-w-site">
         <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
-          Proof
+          Some of the work
         </p>
         <h2
           class="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl"
         >
-          Evidence, not adjectives.
+          A few examples from delivered engagements.
         </h2>
         <p class="mt-5 max-w-2xl text-lg text-fg-muted">
-          I'd rather show the work than describe it. Anonymised, NDA-safe notes
-          from real, delivered engagements live here — each one something you can
-          check.
+          Names, products and employers stay out of it. These are the shape of
+          the work, written so they can sit on a public page.
         </p>
 
         <ul class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -92,41 +89,32 @@
             <p
               class="font-mono text-xs uppercase tracking-[0.12em] text-ink-muted"
             >
-              {{ note.client }}
+              {{ note.label }}
             </p>
-            <p class="mt-3">{{ note.summary }}</p>
-            <p class="mt-4">
-              <NuxtLink
-                :to="note.href"
-                class="font-medium text-link-ink underline underline-offset-4"
-              >
-                Read the note →
-              </NuxtLink>
-            </p>
+            <p class="mt-3 leading-relaxed">{{ note.summary }}</p>
           </li>
         </ul>
       </div>
     </section>
 
-    <!-- Pointer to the only inbound funnel: Small Builds -->
+    <!-- Pointer to a conversation, with small builds as one defined option -->
     <section class="px-5 pb-16 md:px-8 md:pb-24 lg:pb-32">
       <div class="mx-auto max-w-site">
         <div class="rounded-2xl bg-surface p-8 shadow-xl md:p-12">
           <p
             class="font-mono text-sm uppercase tracking-[0.14em] text-ink-muted"
           >
-            Small builds
+            Work together
           </p>
           <h2
             class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
           >
-            Got a small, well-defined build?
+            Discuss your project.
           </h2>
           <p class="mt-4 max-w-2xl text-lg text-ink-muted">
-            A website, an integration, an automation — roughly ten days of work,
-            delivered over a few weeks alongside my embedded engagement. I scope
-            it on a short call, quote a fixed price before anything starts, then
-            build it.
+            If you have a system that needs modernising, or a product that needs
+            ongoing ownership, email me and I'll say whether it's a fit. A
+            smaller, well-defined build is sometimes the right first slice.
           </p>
           <p class="mt-6">
             <NuxtLink
@@ -146,49 +134,61 @@
 import mugUrl from "~/assets/images/mug.jpg";
 
 /**
- * Proof case notes. Empty until ticket 7 supplies real, anonymised, NDA-safe
- * material (the launch gate). The shape is fixed now so notes — and later
- * endorsements — slot in as content without restructuring the section.
+ * Short anonymised examples for the Proof section. Labels describe the kind of
+ * work, never a client, employer, product or acquirer.
  */
 interface CaseNote {
-  /** Stable key / URL slug for the full note. */
   slug: string;
-  /** Anonymised label, e.g. "Mid-size fintech". Never a real client name. */
-  client: string;
-  /** One-line summary shown on Home; the full note lives at `href`. */
+  label: string;
   summary: string;
-  /** Route to the full case note. */
-  href: string;
 }
 
-const caseNotes: CaseNote[] = [];
+const caseNotes: CaseNote[] = [
+  {
+    slug: "api-modernisation",
+    label: "API modernisation",
+    summary:
+      "I moved long-lived .NET Framework APIs toward modern .NET. Existing behaviour had to stay intact, so much of the work was compatibility checks and repairing what the upgrade broke. I've worked on spaghetti codebases and turned them into lasagna: clear layers with distinct responsibilities.",
+  },
+  {
+    slug: "legacy-rewrite",
+    label: "Legacy rewrite",
+    summary:
+      "I rewrote legacy software and simplified the Azure estate that ran it, including infrastructure described in Terraform. I looked at what was actually running, and the running spend came down.",
+  },
+  {
+    slug: "interfaces",
+    label: "Customer and admin interfaces",
+    summary:
+      "I rebuilt customer and admin interfaces, with automated tests and a release pipeline so changes could be checked before they went out.",
+  },
+];
 
 useHead({
-  title:
-    "Jon Lombard — Senior full-stack engineer (C#/.NET, Azure) | IntegraBlue",
+  title: "IntegraBlue | one-person software consultancy",
   meta: [
     {
       name: "description",
       content:
-        "Jon Lombard, senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure — owning delivery from database to cloud to CI/CD. UK, remote-first.",
+        "IntegraBlue is Jon Lombard's one-person consultancy. Independent senior developer: modernising production software and taking ongoing ownership. UK, remote-first.",
     },
     {
       property: "og:title",
-      content: "Jon Lombard — Senior full-stack engineer | IntegraBlue",
+      content: "IntegraBlue | one-person software consultancy",
     },
     {
       property: "og:description",
       content:
-        "Senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure — owning delivery from database to cloud to CI/CD.",
+        "Jon Lombard's consultancy for modernising production software and taking ongoing ownership. Backend, APIs, frontend, databases, infrastructure, tests and CI/CD.",
     },
     {
       name: "twitter:title",
-      content: "Jon Lombard — Senior full-stack engineer | IntegraBlue",
+      content: "IntegraBlue | one-person software consultancy",
     },
     {
       name: "twitter:description",
       content:
-        "Senior full-stack engineer — C#/.NET, JavaScript/TypeScript, Azure — owning delivery from database to cloud to CI/CD.",
+        "IntegraBlue is Jon Lombard's one-person consultancy. Modernising production software and taking ongoing ownership. UK, remote-first.",
     },
   ],
 });

@@ -9,7 +9,7 @@
       <NuxtLink
         to="/"
         class="text-xl font-extrabold tracking-tight"
-        aria-label="IntegraBlue — home"
+        aria-label="IntegraBlue home"
       >
         <span class="text-fg">Integra</span><span class="text-sky">Blue</span>
       </NuxtLink>

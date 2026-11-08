@@ -16,9 +16,9 @@
             <span class="text-fg">Integra</span><span class="text-sky">Blue</span>
           </p>
           <p class="mt-3 text-fg-muted">
-            Senior full-stack engineer, owning delivery from database to cloud to
-            CI/CD. I work remotely with teams anywhere in the UK; on-site by
-            arrangement.
+            My one-person consultancy for modernising production software and
+            taking ongoing ownership. I work remotely with teams anywhere in the
+            UK; on-site by arrangement.
           </p>
         </div>
 

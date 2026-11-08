@@ -10,27 +10,25 @@
         <h1
           class="mt-5 max-w-3xl text-balance text-4xl font-extrabold leading-[1.05] tracking-tight text-fg sm:text-5xl"
         >
-          Got a small, well-defined build?
+          A small, well-defined piece of work, quoted up front.
         </h1>
 
         <p class="mt-6 max-w-2xl text-lg text-fg-muted sm:text-xl">
-          A website, an integration, an automation — if it's a single,
+          A website, an integration, an automation: if it's a single,
           well-defined piece of work, I can build it in side capacity, at a
           fixed price agreed up front.
         </p>
 
         <p class="mt-5 max-w-2xl text-base leading-relaxed text-fg-muted">
-          I'm a senior full-stack engineer, and small builds are how I take on
-          focused work outside my embedded engagement. You get the same person
-          for scoping, building, and handover — no account manager, no handoffs,
-          no surprises.
+          IntegraBlue is my one-person consultancy. Small builds are one way to
+          start. You get the same person for scoping, building, and handover.
         </p>
 
         <!-- Scope at a glance (mono technical accent, not pricing) -->
         <p
           class="mt-8 font-mono text-sm uppercase tracking-[0.12em] text-sky"
         >
-          ~10 effort-days · 4–8 weeks · fixed quote
+          ~10 effort-days · 4-8 weeks · fixed quote
         </p>
 
         <div class="mt-9">
@@ -38,7 +36,7 @@
             to="/contact"
             class="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-accent-ink transition-colors duration-150 hover:bg-accent-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-canvas"
           >
-            Tell me about your build
+            Discuss your project
           </NuxtLink>
         </div>
       </div>
@@ -60,11 +58,11 @@
               One thing, described in a sentence.
             </h2>
             <p class="mt-5 text-lg leading-relaxed text-ink-muted">
-              A small build is a single, well-defined piece of work — something
+              A small build is a single, well-defined piece of work: something
               you can describe in a sentence and I can finish in about ten
               effort-days. That lands over roughly four to eight calendar weeks,
-              because I fit it around a full-time embedded engagement rather than
-              dropping everything for it.
+              because I fit it around other delivery rather than dropping
+              everything for it.
             </p>
             <p class="mt-4 text-lg leading-relaxed text-ink-muted">
               The scope is the honest part. If the work is genuinely small and
@@ -106,9 +104,8 @@
                 <p class="font-mono text-sm text-ink-muted">03</p>
                 <h3 class="mt-2 text-lg font-bold text-ink">The build</h3>
                 <p class="mt-2 leading-relaxed text-ink-muted">
-                  I build it over four to eight weeks alongside my embedded
-                  engagement and hand it over finished — the same senior
-                  engineer who scoped it.
+                  I build it over four to eight weeks alongside other work and
+                  hand it over finished, the same person who scoped it.
                 </p>
               </li>
             </ol>
@@ -134,7 +131,7 @@
           >
             <h3 class="text-lg font-bold text-ink">A website</h3>
             <p class="mt-3 leading-relaxed text-ink-muted">
-              A marketing site or landing page — designed, built, and deployed on
+              A marketing site or landing page, designed, built, and deployed on
               a stack you can actually maintain, not a template you'll fight
               later.
             </p>
@@ -178,26 +175,25 @@
             <h2
               class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
             >
-              If it's over the cap, I'll tell you straight.
+              Larger work is still worth a conversation.
             </h2>
             <p class="mt-5 text-lg leading-relaxed text-ink-muted">
-              Some builds are bigger than about ten effort-days — an MVP, a full
-              product, an ongoing programme of work. That's real work, just not
-              a small build, and pretending otherwise helps no one.
+              Some work is bigger than about ten effort-days: modernising an
+              existing system, taking ongoing product ownership, an MVP. That's
+              often the main IntegraBlue work, just not a small build.
             </p>
             <p class="mt-4 text-lg leading-relaxed text-ink-muted">
-              So you'll get one of two honest options: a "phase one"
-              counter-offer — the most valuable slice, scoped to fit and
-              delivered first — or a referral to someone better placed to take
-              on the whole thing. What I won't do is overpromise on capacity my
-              embedded engagement already spends.
+              Email me and I'll say whether I can take it. If a small build
+              still helps, I may offer a phase one slice, the most useful piece
+              scoped to fit and delivered first. If it isn't a fit, a referral
+              is more honest than stretching a fixed quote.
             </p>
             <p class="mt-8">
               <NuxtLink
                 to="/contact"
                 class="font-medium text-link-ink underline underline-offset-4"
               >
-                Tell me what you're trying to build →
+                Discuss your project →
               </NuxtLink>
             </p>
           </div>
@@ -210,30 +206,30 @@
 <script setup lang="ts">
 useHead({
   title:
-    "Small builds — fixed-scope websites, integrations & automations | IntegraBlue",
+    "Small builds | fixed-scope websites, integrations and automations",
   meta: [
     {
       name: "description",
       content:
-        "A small, well-defined build — a website, an integration, an automation. Scoped on a short free call and delivered at a fixed price over four to eight weeks, by the senior engineer who builds it.",
+        "A small, well-defined build: a website, an integration, an automation. Scoped on a short free call and delivered at a fixed price over four to eight weeks, by the person who builds it.",
     },
     {
       property: "og:title",
-      content: "Small builds — websites, integrations & automations | IntegraBlue",
+      content: "Small builds | websites, integrations and automations",
     },
     {
       property: "og:description",
       content:
-        "A single, well-defined build delivered in side capacity: scoping call, fixed quote agreed before work starts, then the build. Roughly ten effort-days over four to eight weeks.",
+        "A single, well-defined build: scoping call, fixed quote agreed before work starts, then the build. Roughly ten effort-days over four to eight weeks.",
     },
     {
       name: "twitter:title",
-      content: "Small builds — websites, integrations & automations | IntegraBlue",
+      content: "Small builds | websites, integrations and automations",
     },
     {
       name: "twitter:description",
       content:
-        "A single, well-defined build delivered in side capacity: scoping call, fixed quote, then the build. Roughly ten effort-days over four to eight weeks.",
+        "A single, well-defined build: scoping call, fixed quote, then the build. Roughly ten effort-days over four to eight weeks.",
     },
   ],
 });

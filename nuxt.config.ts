@@ -23,19 +23,19 @@ export default defineNuxtConfig({
     baseURL: "/",
     buildAssetsDir: "/_nuxt/",
     head: {
-      title: "IntegraBlue Web Agency",
+      title: "IntegraBlue | one-person software consultancy",
       meta: [
         {
           name: "description",
           content:
-            "Modern web agency for small businesses and startups. Specializing in Nuxt 3, Vue.js, and minimalist design.",
+            "IntegraBlue is Jon Lombard's one-person consultancy. Independent senior developer: modernising production software and taking ongoing ownership. UK, remote-first.",
         },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { property: "og:title", content: "IntegraBlue Web Agency" },
+        { property: "og:title", content: "IntegraBlue | one-person software consultancy" },
         {
           property: "og:description",
           content:
-            "Modern web agency for small businesses and startups. Specializing in Nuxt 3, Vue.js, and minimalist design.",
+            "Jon Lombard's consultancy for modernising production software and taking ongoing ownership. Backend, APIs, frontend, databases, infrastructure, tests and CI/CD.",
         },
         { property: "og:type", content: "website" },
         { property: "og:url", content: "https://integrablue.co.uk/" },
@@ -44,11 +44,11 @@ export default defineNuxtConfig({
           content: "https://integrablue.co.uk/favicon.ico",
         },
         { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: "IntegraBlue Web Agency" },
+        { name: "twitter:title", content: "IntegraBlue | one-person software consultancy" },
         {
           name: "twitter:description",
           content:
-            "Modern web agency for small businesses and startups. Specializing in Nuxt 3, Vue.js, and minimalist design.",
+            "IntegraBlue is Jon Lombard's one-person consultancy. Modernising production software and taking ongoing ownership. UK, remote-first.",
         },
         {
           name: "twitter:image",
