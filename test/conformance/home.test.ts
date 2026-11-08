@@ -2,27 +2,25 @@ import { describe, expect, it } from "vitest";
 import { loadRoute, mainOf, mainText } from "../helpers/rendered";
 
 /**
- * Ticket 2 — Home page rebuild. Asserts over the pre-rendered home page the way
- * a vetter sees it (CONTEXT.md is binding). Everything is scoped to `<main>` so
- * these home-only rules never collide with the shared nav/footer, which are
- * owned by tickets 6 and 8.
+ * Home page copy. Asserts over the pre-rendered home page the way a visitor
+ * sees it. Everything is scoped to `<main>` so these home-only rules never
+ * collide with the shared nav/footer.
  */
 
 const norm = (s: string): string => s.replace(/\s+/g, " ").trim();
 
 describe("conformance — home page (ticket 2)", () => {
-  it("leads with the Spearhead on the first screen", async () => {
+  it("leads with the company and the owner on the first screen", async () => {
     const home = await loadRoute("/");
 
-    // "First screen" over static HTML: the Spearhead must live in the hero —
-    // the first <section> of the page's own content, above everything else.
     const hero = mainOf(home).querySelector("section");
     expect(hero, "the home page should open with a hero <section>").toBeTruthy();
     const heroText = norm(hero!.structuredText);
 
-    expect(heroText).toContain("Senior full-stack engineer");
-    expect(heroText).toContain("C#/.NET, JavaScript/TypeScript, Azure");
-    expect(heroText).toContain("owning delivery from database to cloud to CI/CD");
+    expect(heroText).toMatch(/IntegraBlue/i);
+    expect(heroText).toMatch(/one-person consultancy/i);
+    expect(heroText).toMatch(/independent senior developer/i);
+    expect(heroText).toMatch(/modernis/i);
   });
 
   it("shows the owner's real name and photo, in a first-person voice", async () => {
@@ -32,8 +30,6 @@ describe("conformance — home page (ticket 2)", () => {
 
     expect(text).toContain("Jon Lombard");
 
-    // A real photo the vetter can match to the person — with the owner's name
-    // as alt text (its job is verification, per DESIGN_SYSTEM.md).
     const img = main.querySelector("img");
     expect(img, "the home page should render the owner's photo").toBeTruthy();
     expect(img!.getAttribute("src") ?? "").toMatch(
@@ -41,7 +37,6 @@ describe("conformance — home page (ticket 2)", () => {
     );
     expect(img!.getAttribute("alt") ?? "").toMatch(/Jon Lombard/i);
 
-    // First-person voice: the copy speaks as "I", never an anonymous "we".
     expect(text).toMatch(/\bI\b/);
   });
 
@@ -50,23 +45,19 @@ describe("conformance — home page (ticket 2)", () => {
     const text = mainText(home);
     const main = mainOf(home);
 
-    // No anonymous "we"/"our" — a solo engineer speaks in the first person.
     expect(text).not.toMatch(/\bwe\b/i);
     expect(text).not.toMatch(/\bour\b/i);
 
-    // No agency positioning or abandoned small-business target market.
     expect(text).not.toMatch(/\bagency\b/i);
     expect(text).not.toMatch(/small business(es)?|start[- ]?ups?/i);
 
-    // No invented testimonials or unverifiable metrics.
     expect(text).not.toMatch(/testimonial/i);
     expect(text).not.toMatch(/what our clients say/i);
-    expect(text).not.toMatch(/\d+\s?%/); // e.g. the retired "increased leads by 40%"
+    expect(text).not.toMatch(/trusted by/i);
+    expect(text).not.toMatch(/\d+\s?%/);
 
-    // No "AI-powered"/"AI-first" branding anywhere on Home.
     expect(text).not.toMatch(/ai[-\s]?(powered|first)/i);
 
-    // The Mission surfaces only as first-person copy — never a framed box.
     expect(text).not.toMatch(/our mission/i);
     const headings = main
       .querySelectorAll("h1, h2, h3, h4")
@@ -75,36 +66,47 @@ describe("conformance — home page (ticket 2)", () => {
     expect(headings).not.toContain("our mission");
   });
 
-  it("renders a structural, placeholder-free Proof container that is empty until ticket 7", async () => {
+  it("renders a Proof section with a few anonymised examples", async () => {
     const home = await loadRoute("/");
     const main = mainOf(home);
-
     const proof = main.querySelector("#proof");
     expect(proof, "Home should carry a Proof section (#proof)").toBeTruthy();
 
-    // Empty until ticket 7 supplies real case notes: the container exists so
-    // notes slot in without restructuring, but nothing is invented yet.
+    const items = proof!.querySelectorAll("[data-proof-item]");
     expect(
-      proof!.querySelectorAll("[data-proof-item]").length,
-      "Proof must ship empty — no invented case notes before ticket 7",
-    ).toBe(0);
+      items.length,
+      "Proof should carry two or three short anonymised examples",
+    ).toBeGreaterThanOrEqual(2);
+    expect(items.length).toBeLessThanOrEqual(3);
 
-    // No placeholder cruft standing in for the absent proof.
-    expect(norm(proof!.structuredText)).not.toMatch(
+    const proofText = norm(proof!.structuredText);
+    expect(proofText).not.toMatch(
       /coming soon|placeholder|lorem ipsum|todo/i,
     );
+    expect(proofText).not.toMatch(/\d+\s?%/);
+    expect(proofText).not.toMatch(/zero downtime|zero breakage/i);
+    expect(proofText).toMatch(/\.NET Framework/i);
+    expect(proofText).toMatch(/Azure/i);
+    expect(proofText).toMatch(/lasagna/i);
   });
 
-  it("points the visitor to Small Builds", async () => {
+  it("points the visitor to a conversation, and still to Small Builds", async () => {
     const home = await loadRoute("/");
     const main = mainOf(home);
+    const text = mainText(home);
 
-    const pointsToSmallBuilds = main
+    expect(text).toMatch(/Discuss your project/i);
+
+    const hrefs = main
       .querySelectorAll("a")
-      .some((a) => (a.getAttribute("href") ?? "").includes("/small-builds"));
+      .map((a) => a.getAttribute("href") ?? "");
     expect(
-      pointsToSmallBuilds,
-      "Home should carry a pointer linking to Small Builds",
+      hrefs.some((href) => href.includes("/contact")),
+      "Home should link to Contact",
+    ).toBe(true);
+    expect(
+      hrefs.some((href) => href.includes("/small-builds")),
+      "Home should still carry a pointer linking to Small Builds",
     ).toBe(true);
   });
 });

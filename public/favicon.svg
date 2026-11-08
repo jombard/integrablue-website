@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="IntegraBlue">
+  <!--
+    IB mark: light azure I (#93c5fd) on navy, navy B (#0d2444) on azure.
+    Split field keeps both letters clear at 16px tab size.
+  -->
+  <defs>
+    <clipPath id="badge">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#badge)">
+    <rect width="32" height="64" fill="#0d2444"/>
+    <rect x="32" width="32" height="64" fill="#93c5fd"/>
+  </g>
+  <!-- Slab I -->
+  <path fill="#93c5fd" d="M9 11h14v7H18v28h5v7H9v-7h5V18H9z"/>
+  <!-- Geometric B with counters -->
+  <path fill="#0d2444" fill-rule="evenodd" d="
+    M36 11h14.2c6.6 0 11.8 4.6 11.8 10.6 0 3.4-1.6 6.3-4.2 8.1 3.5 1.7 5.8 5.3 5.8 9.6 0 6.7-5.5 12.7-13.6 12.7H36V11zm
+    7 6.4v11.2h6.6c3.4 0 5.6-2.1 5.6-5.6 0-3.5-2.2-5.6-5.6-5.6H43zm
+    0 17.4v13.4h8c4.3 0 7-2.7 7-6.7 0-4-2.7-6.7-7-6.7h-8z"/>
+</svg>

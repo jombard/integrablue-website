@@ -24,12 +24,15 @@
   --color-accent-ink: #07152c; /* label on the azure button */
 
   /* ---- light reading surfaces (long-form prose) ---- */
-  --color-surface: #f4f7fb; /* reading card / panel background */
-  --color-surface-sunk: #e7eef7; /* nested / subtle fill */
+  /* Stronger azure than brand-100 (#dbeafe), which still read as white on
+     navy. blue-300 / sky sit in the same family as accent and remain AA
+     with the darker on-panel ink below. */
+  --color-surface: #93c5fd; /* reading card / panel background */
+  --color-surface-sunk: #7fb2f7; /* nested / form fill (same as sky) */
   --color-ink: #0f1d33; /* primary text on light */
-  --color-ink-muted: #48586f; /* secondary text on light */
-  --color-hairline-lt: #d5deea; /* borders/dividers on light */
-  --color-link-ink: #1d4ed8; /* inline links on light */
+  --color-ink-muted: #334155; /* secondary text on light */
+  --color-hairline-lt: #60a5fa; /* borders/dividers on light */
+  --color-link-ink: #1e3a8a; /* inline links on light */
 
   /* ---- type + layout ---- */
   --font-sans:
