@@ -3,10 +3,11 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { loadRoute, outputDir } from "../helpers/rendered";
 
+const WHITE = "#f5f8ff";
 const SKY = "#7fb2f7";
 const NAVY = "#0d2444";
 
-describe("conformance — B favicon", () => {
+describe("conformance — two-tone favicon", () => {
   it("ships SVG, ICO and PNG fallbacks in the static output", () => {
     for (const name of [
       "favicon.svg",
@@ -22,6 +23,7 @@ describe("conformance — B favicon", () => {
     }
 
     const svg = readFileSync(join(outputDir, "favicon.svg"), "utf8");
+    expect(svg).toContain(WHITE);
     expect(svg).toContain(SKY);
     expect(svg).toContain(NAVY);
     expect(svg.toLowerCase()).not.toContain("nuxt");
