@@ -3,10 +3,10 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { loadRoute, outputDir } from "../helpers/rendered";
 
-const AZURE = "#93c5fd";
+const SKY = "#7fb2f7";
 const NAVY = "#0d2444";
 
-describe("conformance — IB favicon", () => {
+describe("conformance — B favicon", () => {
   it("ships SVG, ICO and PNG fallbacks in the static output", () => {
     for (const name of [
       "favicon.svg",
@@ -22,12 +22,12 @@ describe("conformance — IB favicon", () => {
     }
 
     const svg = readFileSync(join(outputDir, "favicon.svg"), "utf8");
-    expect(svg).toContain(AZURE);
+    expect(svg).toContain(SKY);
     expect(svg).toContain(NAVY);
     expect(svg.toLowerCase()).not.toContain("nuxt");
   });
 
-  it("prefers the IB SVG icon and keeps ICO/PNG fallbacks on every route", async () => {
+  it("prefers the SVG icon and keeps ICO/PNG fallbacks on every route", async () => {
     const home = await loadRoute("/");
     const icons = home.root
       .querySelectorAll("link[rel~='icon'], link[rel='shortcut icon']")
