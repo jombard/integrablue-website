@@ -42,80 +42,72 @@
       </div>
     </section>
 
-    <!-- What fits + how it works — long-form prose on a light reading surface -->
-    <section class="px-5 pb-4 md:px-8">
+    <!-- What fits + how it works -->
+    <section class="border-t border-hairline px-5 py-16 md:px-8 md:py-24">
       <div class="mx-auto max-w-site">
-        <div class="rounded-2xl bg-surface p-8 text-ink shadow-xl md:p-12">
-          <div class="max-w-2xl">
-            <p
-              class="font-mono text-sm uppercase tracking-[0.12em] text-ink-muted"
-            >
-              What fits
-            </p>
-            <h2
-              class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
-            >
-              One thing, described in a sentence.
-            </h2>
-            <p class="mt-5 text-lg leading-relaxed text-ink-muted">
-              A small build is a single, well-defined piece of work: something
-              you can describe in a sentence and I can finish in about ten
-              effort-days. That lands over roughly four to eight calendar weeks,
-              because I fit it around other delivery rather than dropping
-              everything for it.
-            </p>
-            <p class="mt-4 text-lg leading-relaxed text-ink-muted">
-              The scope is the honest part. If the work is genuinely small and
-              clear, it fits. If it isn't, I'll say so on the call rather than
-              stretch a fixed quote over a moving target.
-            </p>
-          </div>
+        <div class="max-w-2xl">
+          <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
+            What fits
+          </p>
+          <h2 class="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl">
+            One thing, described in a sentence.
+          </h2>
+          <p class="mt-5 text-lg leading-relaxed text-fg-muted">
+            A small build is a single, well-defined piece of work: something
+            you can describe in a sentence and I can finish in about ten
+            effort-days. That lands over roughly four to eight calendar weeks,
+            because I fit it around other delivery rather than dropping
+            everything for it.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-fg-muted">
+            The scope is the honest part. If the work is genuinely small and
+            clear, it fits. If it isn't, I'll say so on the call rather than
+            stretch a fixed quote over a moving target.
+          </p>
+        </div>
 
-          <!-- Process: scoping call → fixed quote → build -->
-          <div class="mt-10 border-t border-hairline-lt pt-8">
-            <p
-              class="font-mono text-sm uppercase tracking-[0.12em] text-ink-muted"
-            >
-              How it works
-            </p>
-            <ol class="mt-6 grid gap-8 md:grid-cols-3">
-              <li>
-                <p class="font-mono text-sm text-ink-muted">01</p>
-                <h3 class="mt-2 text-lg font-bold text-ink">
-                  A short scoping call
-                </h3>
-                <p class="mt-2 leading-relaxed text-ink-muted">
-                  Free, no obligation. You describe the problem; I tell you
-                  honestly whether it fits a small build and what it would take.
-                </p>
-              </li>
-              <li>
-                <p class="font-mono text-sm text-ink-muted">02</p>
-                <h3 class="mt-2 text-lg font-bold text-ink">
-                  A fixed quote, up front
-                </h3>
-                <p class="mt-2 leading-relaxed text-ink-muted">
-                  I write down exactly what I'll deliver for a fixed price,
-                  agreed before any work starts. No open-ended
-                  time-and-materials, no scope creep by stealth.
-                </p>
-              </li>
-              <li>
-                <p class="font-mono text-sm text-ink-muted">03</p>
-                <h3 class="mt-2 text-lg font-bold text-ink">The build</h3>
-                <p class="mt-2 leading-relaxed text-ink-muted">
-                  I build it over four to eight weeks alongside other work and
-                  hand it over finished, the same person who scoped it.
-                </p>
-              </li>
-            </ol>
-          </div>
+        <!-- Process: scoping call → fixed quote → build -->
+        <div class="mt-14 border-t border-hairline pt-10">
+          <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
+            How it works
+          </p>
+          <ol class="mt-8 grid gap-x-10 gap-y-10 md:grid-cols-3">
+            <li class="border-t border-hairline pt-5">
+              <p class="font-mono text-sm text-sky">01</p>
+              <h3 class="mt-2 text-lg font-bold tracking-tight text-fg">
+                A short scoping call
+              </h3>
+              <p class="mt-2 leading-relaxed text-fg-muted">
+                Free, no obligation. You describe the problem; I tell you
+                honestly whether it fits a small build and what it would take.
+              </p>
+            </li>
+            <li class="border-t border-hairline pt-5">
+              <p class="font-mono text-sm text-sky">02</p>
+              <h3 class="mt-2 text-lg font-bold tracking-tight text-fg">
+                A fixed quote, up front
+              </h3>
+              <p class="mt-2 leading-relaxed text-fg-muted">
+                I write down exactly what I'll deliver for a fixed price,
+                agreed before any work starts. No open-ended
+                time-and-materials, no scope creep by stealth.
+              </p>
+            </li>
+            <li class="border-t border-hairline pt-5">
+              <p class="font-mono text-sm text-sky">03</p>
+              <h3 class="mt-2 text-lg font-bold tracking-tight text-fg">The build</h3>
+              <p class="mt-2 leading-relaxed text-fg-muted">
+                I build it over four to eight weeks alongside other work and
+                hand it over finished, the same person who scoped it.
+              </p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
     <!-- Concrete examples of what qualifies -->
-    <section class="px-5 py-16 md:px-8 md:py-24">
+    <section class="border-t border-hairline px-5 py-16 md:px-8 md:py-24">
       <div class="mx-auto max-w-site">
         <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
           For example
@@ -124,35 +116,33 @@
           What a small build looks like.
         </h2>
 
-        <ul class="mt-10 grid gap-6 md:grid-cols-3">
-          <li
-            data-example
-            class="rounded-2xl bg-surface p-6 text-ink shadow-xl"
-          >
-            <h3 class="text-lg font-bold text-ink">A website</h3>
-            <p class="mt-3 leading-relaxed text-ink-muted">
+        <ul class="mt-10 grid gap-x-10 gap-y-10 md:grid-cols-3">
+          <li data-example class="border-t border-hairline pt-5">
+            <p class="font-mono text-sm text-sky">01</p>
+            <h3 class="mt-2 text-lg font-bold tracking-tight text-fg">A website</h3>
+            <p class="mt-3 leading-relaxed text-fg-muted">
               A marketing site or landing page, designed, built, and deployed on
               a stack you can actually maintain, not a template you'll fight
               later.
             </p>
           </li>
-          <li
-            data-example
-            class="rounded-2xl bg-surface p-6 text-ink shadow-xl"
-          >
-            <h3 class="text-lg font-bold text-ink">An integration</h3>
-            <p class="mt-3 leading-relaxed text-ink-muted">
+          <li data-example class="border-t border-hairline pt-5">
+            <p class="font-mono text-sm text-sky">02</p>
+            <h3 class="mt-2 text-lg font-bold tracking-tight text-fg">
+              An integration
+            </h3>
+            <p class="mt-3 leading-relaxed text-fg-muted">
               Two systems that don't talk yet, wired together: a booking form
               into your CRM, a payment provider into your ledger, one API onto
               another.
             </p>
           </li>
-          <li
-            data-example
-            class="rounded-2xl bg-surface p-6 text-ink shadow-xl"
-          >
-            <h3 class="text-lg font-bold text-ink">An automation</h3>
-            <p class="mt-3 leading-relaxed text-ink-muted">
+          <li data-example class="border-t border-hairline pt-5">
+            <p class="font-mono text-sm text-sky">03</p>
+            <h3 class="mt-2 text-lg font-bold tracking-tight text-fg">
+              An automation
+            </h3>
+            <p class="mt-3 leading-relaxed text-fg-muted">
               A manual, repetitive job made to run itself: a scheduled data sync,
               a report that builds and sends on its own, a webhook that files the
               work for you.
@@ -162,41 +152,35 @@
       </div>
     </section>
 
-    <!-- Over the cap: honest options — long-form reading on a light surface -->
-    <section class="px-5 pb-16 md:px-8 md:pb-24 lg:pb-32">
+    <!-- Over the cap: honest options -->
+    <section class="border-t border-hairline px-5 py-16 md:px-8 md:py-24 lg:pb-32">
       <div class="mx-auto max-w-site">
-        <div class="rounded-2xl bg-surface p-8 text-ink shadow-xl md:p-12">
-          <div class="max-w-2xl">
-            <p
-              class="font-mono text-sm uppercase tracking-[0.12em] text-ink-muted"
+        <div class="max-w-2xl">
+          <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
+            Bigger than that?
+          </p>
+          <h2 class="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl">
+            Larger work is still worth a conversation.
+          </h2>
+          <p class="mt-5 text-lg leading-relaxed text-fg-muted">
+            Some work is bigger than about ten effort-days: modernising an
+            existing system, taking ongoing product ownership, an MVP. That's
+            often the main IntegraBlue work, just not a small build.
+          </p>
+          <p class="mt-4 text-lg leading-relaxed text-fg-muted">
+            Email me and I'll say whether I can take it. If a small build
+            still helps, I may offer a phase one slice, the most useful piece
+            scoped to fit and delivered first. If it isn't a fit, a referral
+            is more honest than stretching a fixed quote.
+          </p>
+          <p class="mt-8">
+            <NuxtLink
+              to="/contact"
+              class="font-medium text-sky underline underline-offset-4"
             >
-              Bigger than that?
-            </p>
-            <h2
-              class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
-            >
-              Larger work is still worth a conversation.
-            </h2>
-            <p class="mt-5 text-lg leading-relaxed text-ink-muted">
-              Some work is bigger than about ten effort-days: modernising an
-              existing system, taking ongoing product ownership, an MVP. That's
-              often the main IntegraBlue work, just not a small build.
-            </p>
-            <p class="mt-4 text-lg leading-relaxed text-ink-muted">
-              Email me and I'll say whether I can take it. If a small build
-              still helps, I may offer a phase one slice, the most useful piece
-              scoped to fit and delivered first. If it isn't a fit, a referral
-              is more honest than stretching a fixed quote.
-            </p>
-            <p class="mt-8">
-              <NuxtLink
-                to="/contact"
-                class="font-medium text-link-ink underline underline-offset-4"
-              >
-                Discuss your project →
-              </NuxtLink>
-            </p>
-          </div>
+              Discuss your project →
+            </NuxtLink>
+          </p>
         </div>
       </div>
     </section>
