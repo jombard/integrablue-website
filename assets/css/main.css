@@ -13,6 +13,9 @@
   /* ---- dark frame (dominant) ---- */
   --color-canvas: #0d2444; /* primary page background */
   --color-elevated: #16345f; /* dark panels, secondary blue */
+  /* Nuxt UI remaps the `bg-elevated` utility to a light neutral, so form
+     fields use this alias. Same blue as elevated. */
+  --color-panel: #16345f;
   --color-hairline: #274a7a; /* borders/dividers on dark */
   --color-fg: #f5f8ff; /* primary text on dark */
   --color-fg-muted: #a7bad6; /* secondary text on dark */
@@ -22,17 +25,6 @@
   --color-accent: #3b82f6; /* CTA button fill + focus ring ONLY */
   --color-accent-hover: #5a97f8;
   --color-accent-ink: #07152c; /* label on the azure button */
-
-  /* ---- light reading surfaces (long-form prose) ---- */
-  /* Stronger azure than brand-100 (#dbeafe), which still read as white on
-     navy. blue-300 / sky sit in the same family as accent and remain AA
-     with the darker on-panel ink below. */
-  --color-surface: #93c5fd; /* reading card / panel background */
-  --color-surface-sunk: #7fb2f7; /* nested / form fill (same as sky) */
-  --color-ink: #0f1d33; /* primary text on light */
-  --color-ink-muted: #334155; /* secondary text on light */
-  --color-hairline-lt: #60a5fa; /* borders/dividers on light */
-  --color-link-ink: #1e3a8a; /* inline links on light */
 
   /* ---- type + layout ---- */
   --font-sans:

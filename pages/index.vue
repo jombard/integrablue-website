@@ -75,52 +75,47 @@
           Examples from past work.
         </h2>
 
-        <ul class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <ul class="mt-10 grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <li
-            v-for="note in caseNotes"
+            v-for="(note, index) in caseNotes"
             :key="note.slug"
             data-proof-item
-            class="rounded-2xl bg-surface p-6 text-ink shadow-xl"
+            class="border-t border-hairline pt-5"
           >
-            <p
-              class="font-mono text-xs uppercase tracking-[0.12em] text-ink-muted"
-            >
-              {{ note.label }}
+            <p class="font-mono text-sm text-sky">
+              {{ String(index + 1).padStart(2, "0") }}
             </p>
-            <p class="mt-3 leading-relaxed">{{ note.summary }}</p>
+            <h3 class="mt-2 text-lg font-bold tracking-tight text-fg">
+              {{ note.label }}
+            </h3>
+            <p class="mt-3 leading-relaxed text-fg-muted">{{ note.summary }}</p>
           </li>
         </ul>
       </div>
     </section>
 
     <!-- Pointer to a conversation, with small builds as one defined option -->
-    <section class="px-5 pb-16 md:px-8 md:pb-24 lg:pb-32">
+    <section class="border-t border-hairline px-5 py-16 md:px-8 md:py-24 lg:py-32">
       <div class="mx-auto max-w-site">
-        <div class="rounded-2xl bg-surface p-8 text-ink shadow-xl md:p-12">
-          <p
-            class="font-mono text-sm uppercase tracking-[0.14em] text-ink-muted"
+        <p class="font-mono text-sm uppercase tracking-[0.14em] text-sky">
+          Work together
+        </p>
+        <h2 class="mt-3 text-2xl font-bold tracking-tight text-fg sm:text-3xl">
+          Discuss your project.
+        </h2>
+        <p class="mt-4 max-w-2xl text-lg leading-relaxed text-fg-muted">
+          If you have a system that needs modernising, or a product that needs
+          ongoing ownership, email me and I'll say whether it's a fit. A
+          smaller, well-defined build is sometimes the right first slice.
+        </p>
+        <p class="mt-6">
+          <NuxtLink
+            to="/small-builds"
+            class="font-medium text-sky underline underline-offset-4"
           >
-            Work together
-          </p>
-          <h2
-            class="mt-3 text-2xl font-bold tracking-tight text-ink sm:text-3xl"
-          >
-            Discuss your project.
-          </h2>
-          <p class="mt-4 max-w-2xl text-lg text-ink-muted">
-            If you have a system that needs modernising, or a product that needs
-            ongoing ownership, email me and I'll say whether it's a fit. A
-            smaller, well-defined build is sometimes the right first slice.
-          </p>
-          <p class="mt-6">
-            <NuxtLink
-              to="/small-builds"
-              class="font-medium text-link-ink underline underline-offset-4"
-            >
-              See how a small build works →
-            </NuxtLink>
-          </p>
-        </div>
+            See how a small build works →
+          </NuxtLink>
+        </p>
       </div>
     </section>
   </div>
